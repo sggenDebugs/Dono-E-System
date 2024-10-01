@@ -1,16 +1,16 @@
 <template>
   <div>
       <div class="w-[33vw] h-screen absolute right-0 top-0 bg-white">
-        <div class="absolute top-9 right-16 text-[#1b3c59] text-xl font-['Ubuntu'] cursor-pointer">
+        <div class="absolute top-9 right-16 text-[#1b3c59] text-xl font-medium cursor-pointer">
         Sign in
         </div>
       </div>
 
       <div class="absolute left-0 top-0 w-[67vw] h-screen bg-[#1b3c59] flex flex-col justify-center pl-[100px]">
-        <div class="text-[#f2f2f0] text-[56px] font-bold font-['Ubuntu'] leading-tight">
+        <div class="text-[#f2f2f0] text-[56px] font-bold leading-tight">
           Dispose.<br />Reimagine.<br />Repurpose.
         </div>
-        <div class="text-[#f2f2f0] text-4xl font-medium font-['Ubuntu'] mt-6 max-w-[400px]">
+        <div class="text-[#f2f2f0] text-4xl font-medium mt-6 max-w-[400px]">
           Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor.
         </div>
       </div>

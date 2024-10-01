@@ -2,8 +2,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: "./src",
 
-  modules: ['@nuxtjs/tailwindcss', 
-    '@nuxt/eslint'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxt/eslint',
+    "@nuxtjs/supabase",
+  ],
 
   compatibilityDate: "2024-09-26",
 });
