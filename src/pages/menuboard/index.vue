@@ -1,5 +1,3 @@
 <template>
-    <div>
-        Menuboard
-    </div>
+  <div>Menuboard</div>
 </template>
