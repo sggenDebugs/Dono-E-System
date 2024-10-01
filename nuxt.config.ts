@@ -1,11 +1,9 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-
 export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: "./src",
 
-  modules: ['@nuxtjs/tailwindcss',
-    "@nuxt/eslint"],
+  modules: ['@nuxtjs/tailwindcss', 
+    '@nuxt/eslint'],
 
   compatibilityDate: "2024-09-26",
 });
