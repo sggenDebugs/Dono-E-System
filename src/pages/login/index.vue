@@ -1,7 +1,7 @@
 <template>
   <div>
       <div class="w-[33vw] h-screen absolute right-0 top-0 bg-white">
-        <div class="absolute top-9 right-16 text-[#1b3c59] text-xl cursor-pointer">
+        <div class="absolute top-9 right-16 text-[#1b3c59] text-xl font-medium cursor-pointer">
         Sign in
         </div>
       </div>
