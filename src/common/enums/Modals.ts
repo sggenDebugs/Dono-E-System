@@ -1,1 +1,3 @@
-// Modals
+export enum Modaltype {
+    SignUp = 'signUp'
+}

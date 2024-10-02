@@ -12,6 +12,7 @@
   "dependencies": {
     "@nuxtjs/supabase": "^1.4.0",
     "@prisma/client": "^5.20.0",
+    "@supabase/supabase-js": "^2.45.4",
     "nuxt": "^3.13.0",
     "vue": "latest",
     "vue-router": "latest"
