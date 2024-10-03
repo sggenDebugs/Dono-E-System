@@ -1,0 +1,13 @@
+@layer tailwind-base{
+    @tailwind base;
+}
+
+@layer tailwind-utilities{
+    @tailwind variants;
+    @tailwind utilities;
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url("fonts/Ubuntu-Bold.ttf") format("truetype");
+}

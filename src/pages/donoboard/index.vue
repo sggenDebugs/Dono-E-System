@@ -1,5 +1,3 @@
 <template>
-    <div>
-        DonoBoard
-    </div>
+  <div>DonoBoard</div>
 </template>

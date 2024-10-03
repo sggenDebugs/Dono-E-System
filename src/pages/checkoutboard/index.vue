@@ -1,5 +1,3 @@
 <template>
-    <div>
-        CheckoutBoard
-    </div>
+  <div>CheckoutBoard</div>
 </template>

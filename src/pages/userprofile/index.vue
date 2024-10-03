@@ -1,5 +1,3 @@
 <template>
-    <div>
-        UserProfile
-    </div>
+  <div>UserProfile</div>
 </template>
