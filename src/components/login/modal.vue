@@ -9,9 +9,9 @@
                 <div class="self-stretch h-[42px] flex-col justify-start items-start gap-2 flex">
                     <div class="self-stretch px-4 py-3 bg-white rounded-lg border border-[#d9d9d9] justify-start items-start inline-flex">
                      <input
-                    v-model="username"
-                    type="username"
-                    placeholder="Username"
+                    v-model="email"
+                    type="email"
+                    placeholder="Email"
                     class="grow shrink basis-0 text-[#1b1b1b] text-base font-normal font-['Ubuntu'] focus:outline-none"/>
                     </div>
                 </div>
@@ -61,27 +61,29 @@
 </template>
 
 <script setup lang="ts">
+const client = useSupabaseClient();
+const router = useRouter();
 
 const emit = defineEmits(['close']);
 
-const username = ref<string>('');
+const email = ref<string>('');
 const password = ref<string>('');
-
-const client = useSupabaseClient();
+const errorMsg = ref(null);
 
 const closeModal = () => emit('close');
 
-// async function handleSignIn() {
-//     try {
-//         const {data, errors} = await client.auth.signUp({
-//             username: username.value,
-//             password: password.value,
-//         });
-//         if (error) throw error;
-//     } catch (error) {
-//         errorMsg.value = error.message;
-//     }
-// }
+async function handleSignIn() {
+    try {
+        const { error } = await client.auth.signInWithPassword({
+            email: email.value,
+            password: password.value,
+        });
+        if (error) throw error;
+        router.push("/homeboard")
+    } catch (error) {
+        errorMsg.value = error.message;
+    }
+}
 
 // const handleSignIn = () => {
 //   console.log('Email:', username.value);
