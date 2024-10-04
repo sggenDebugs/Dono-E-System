@@ -7,7 +7,8 @@ export default withNuxt(
           "html": {
             "void": "always",
             "normal": "never",
-            "component": "any"
+            "component": "any",
+            "layout": "never"
           }
         }]
       }

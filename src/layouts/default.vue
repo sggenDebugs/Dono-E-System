@@ -67,7 +67,7 @@
             </div>
         </th>
 
-        <th class="w-[312px] h-[46px] px-2.5 py-[15px] my-2 mx-3.5 bg-[#a6ed8e] justify-center items-center inline-block">
+        <th class="w-[self-stretch] h-[46px] px-2.5 py-[15px] my-2 mx-3.5 bg-[#a6ed8e] justify-center items-center inline-block">
             <div class="text-center text-[#1b3c59] text-lg font-light font-['Ubuntu'] mt-[-6px]">
                 REPURPOSE for a greener future.
             </div>
