@@ -6,18 +6,19 @@
         </div>
       </div>
 
-      <div class="absolute left-0 top-0 w-[67vw] h-screen bg-[#1b3c59] flex flex-col justify-center pl-[100px]">
-        <div class="text-[#f2f2f0] text-[56px] font-bold leading-tight">
+      <div class="absolute left-0 top-0 w-[67vw] h-screen bg-[#1b3c59] flex flex-col justify-center pl-[100px][]">
+        <img class="w-[741px] h-[300px] ml-[75px] mb-[50px]" src="~/assets/img/donologo-login.png" />
+        <div class="text-[#f2f2f0] text-[56px] font-bold leading-tight relative left-0 top-0 pl-[118px]">
           Dispose.<br />Reimagine.<br />Repurpose.
         </div>
-        <div class="text-[#f2f2f0] text-4xl font-medium mt-6 max-w-[400px]">
-          Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor.
+        <div class="text-[#f2f2f0] text-2xl text-justify font-medium mt-6 ml-[max-w-[400px] relative left-0 top-0 pl-[118px]">
+          Whether you're selling or donating,<br/> you help reduce e-waste and support a<br/> circular economy, making a positive<br/> impact on both the environment and<br/> the community. Post your tech to<br/> DONO App now! 
         </div>
       </div>
       
       <div class="absolute right-[13.5vw] top-1/2 transform -translate-y-1/2 flex">
-        <div class="bg-[#a6ed8e] flex justify-center mt-[100px] items-center w-[300px] h-[450px]"></div>
-        <div class="bg-[#1b3c59] flex justify-center mt-[100px] items-center w-[300px] h-[450px]"></div>
+        <div class="bg-[#a6ed8e] flex justify-center mt-[250px] items-center w-[300px] h-[450px]"></div>
+        <div class="bg-[#1b3c59] flex justify-center mt-[250px] items-center w-[300px] h-[450px]"></div>
       </div>
       
       <div class="w-screen absolute top-4 left-0 flex justify-between items-center px-8"></div> 
