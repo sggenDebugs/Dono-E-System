@@ -29,7 +29,6 @@
                 </div>
             </div>
         </div>
-
         <div class="self-stretch w-[77.42%] absolute top-[70px] inset-y-0 right-0 m-4">
             <div class="w-full border border-[#456173]"></div>
         </div>
