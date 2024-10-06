@@ -1,5 +1,5 @@
 <template>
-  <checkout></checkout>
+    <div>CheckoutBoard</div>
 </template>
 
 <script lang="ts">

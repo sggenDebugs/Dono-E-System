@@ -13,12 +13,11 @@
                         <img class="w-[23px] h-[23px] relative hover:cursor-pointer" src="/assets/img/Dropdown.png">
                 </div>
             </div>
-
-            
             <HomeboardAdminSidebar/>
-
         </div>
-
+        <div class="self-stretch w-[77.42%] absolute top-[70px] inset-y-0 right-0 m-4">
+            <div class="w-full border border-[#456173]"></div>
+        </div>
         <table>
         <thead>
             <tr class="self-stretch sm:justify-center absolute w-[79%] top-[90px] right-0 mr-1 flex flex-row">
@@ -36,7 +35,7 @@
                     <div class="text-center text-[#1b3c59] text-[1.3vw] font-light font-['Ubuntu']">
                         REPURPOSE for a greener future.
                     </div>
-                    <div class="container w-[100%] h-[600px] absolute top-[70px] left-[50%] transform -translate-x-1/2 flex justify-center items-center">
+                    <div class="container w-[100%] h-[565px] absolute top-[70px] left-[50%] transform -translate-x-1/2 flex justify-center items-center">
                         <slot />
                     </div>
                 </th>
