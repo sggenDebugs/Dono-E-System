@@ -51,7 +51,7 @@
                     <div class="text-center text-[#1b3c59] text-[1.3vw] font-light font-['Ubuntu']">
                         REPURPOSE for a greener future.
                     </div>
-                    <div class="container w-[100%] h-[600px] absolute top-[70px] left-[50%] transform -translate-x-1/2 flex justify-center items-center">
+                    <div class="container w-[100%] h-[565px] absolute top-[70px] left-[50%] transform -translate-x-1/2 flex justify-center items-center">
                         <slot />
                     </div>
                 </th>
