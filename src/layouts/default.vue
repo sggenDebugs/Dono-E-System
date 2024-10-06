@@ -28,19 +28,19 @@
             
             <div class="self-stretch flex flex-col justify-center items-center text-3xl absolute inset-0">
                 
-                <div class="w-[314px] h-[75px] flex justify-center items-center text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59] rounded-r-[20px] font-medium font-['Ubuntu']">
+                <div class="w-[314px] h-[75px] flex justify-center items-center text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59] hover:cursor-pointer  rounded-r-[20px] font-medium font-['Ubuntu']">
                     Homepage
                 </div>
 
-                <div class="w-[314px] h-[75px] flex justify-center items-center text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59] rounded-r-[20px] font-medium font-['Ubuntu']">
+                <div class="w-[314px] h-[75px] flex justify-center items-center text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59] hover:cursor-pointer  rounded-r-[20px] font-medium font-['Ubuntu']">
                     Dono Page
                 </div>  
 
-                <div class="w-[314px] h-[75px] flex justify-center items-center text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59] rounded-r-[20px] font-medium font-['Ubuntu']">
+                <div class="w-[314px] h-[75px] flex justify-center items-center text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59] hover:cursor-pointer  rounded-r-[20px] font-medium font-['Ubuntu']">
                     Checkout
                 </div>
 
-                <div class="w-[314px] h-[75px] flex justify-center items-center text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59] rounded-r-[20px] font-medium font-['Ubuntu']">
+                <div class="w-[314px] h-[75px] flex justify-center items-center text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59] hover:cursor-pointer  rounded-r-[20px] font-medium font-['Ubuntu']">
                     Listings
                 </div>
 
@@ -49,7 +49,7 @@
         </div>
 
         <div class="self-stretch absolute top-[70px] right-0 m-4">
-            <div class="w-[1021px] h-[0px] border border-[#456173]"></div>
+            <div class="w-[1021px] border border-[#456173]"></div>
         </div>
 
 <table>
@@ -67,7 +67,7 @@
             </div>
         </th>
 
-        <th class="w-[312px] h-[46px] px-2.5 py-[15px] my-2 mx-3.5 bg-[#a6ed8e] justify-center items-center inline-block">
+        <th class="w-[self-stretch] h-[46px] px-2.5 py-[15px] my-2 mx-3.5 bg-[#a6ed8e] justify-center items-center inline-block">
             <div class="text-center text-[#1b3c59] text-lg font-light font-['Ubuntu'] mt-[-6px]">
                 REPURPOSE for a greener future.
             </div>
@@ -75,6 +75,10 @@
     </tr>
   </thead>
 </table>
+
+    <div class="container w-[1024px] h-[485px] bottom-0 right-0 mx-4 absolute flex justify-center items-center">
+        <slot />
+    </div>
 
 </div>
 
