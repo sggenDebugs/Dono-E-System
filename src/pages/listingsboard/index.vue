@@ -1,8 +1,8 @@
 <template>
-  <div>UserProfile</div>
+    <div>Listings</div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 definePageMeta({
   layout: "default",
 })

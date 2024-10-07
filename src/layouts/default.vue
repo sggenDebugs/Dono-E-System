@@ -13,26 +13,11 @@
                         <img class="w-[23px] h-[23px] relative hover:cursor-pointer" src="/assets/img/Dropdown.png">
                 </div>
             </div>
-
-            <div class="w-auto self-stretch flex flex-col justify-center items-center text-3xl absolute inset-0">
-                <div class="w-[314px] h-[75px] flex justify-center items-center text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59] hover:cursor-pointer  rounded-r-[20px] font-medium font-['Ubuntu']">
-                    Homepage
-                </div>
-                <div class="w-[314px] h-[75px] flex justify-center items-center text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59] hover:cursor-pointer  rounded-r-[20px] font-medium font-['Ubuntu']">
-                    Dono Page
-                </div>  
-                <div class="w-[314px] h-[75px] flex justify-center items-center text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59] hover:cursor-pointer  rounded-r-[20px] font-medium font-['Ubuntu']">
-                    Checkout
-                </div>
-                <div class="w-[314px] h-[75px] flex justify-center items-center text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59] hover:cursor-pointer  rounded-r-[20px] font-medium font-['Ubuntu']">
-                    Listings
-                </div>
-            </div>
+            <HomeboardAdminSidebar/>
         </div>
         <div class="self-stretch w-[77.42%] absolute top-[70px] inset-y-0 right-0 m-4">
             <div class="w-full border border-[#456173]"></div>
         </div>
-
         <table>
         <thead>
             <tr class="self-stretch sm:justify-center absolute w-[79%] top-[90px] right-0 mr-1 flex flex-row">
