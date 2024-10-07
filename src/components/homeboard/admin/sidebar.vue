@@ -2,12 +2,12 @@
     <ul class = "self-stretch flex flex-col justify-center items-center text-3xl absolute inset-0">
         <NuxtLink
         to="/homeboard"
-        class="tab w-[314px] h-[75px] flex justify-center items-center text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59] hover:cursor-pointer ease-in-out duration-300 rounded-r-[20px] font-medium font-['Ubuntu']">
+        class="tab w-[314px] h-[75px] flex justify-center items-center text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59] hover:cursor-pointer ease-in-out duration-200 rounded-r-[20px] font-medium font-['Ubuntu']">
             Home
         </NuxtLink>
         <NuxtLink
         to="/donoboard"
-        class="tab w-[314px] h-[75px] flex justify-center items-center text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59] hover:cursor-pointer ease-in-out duration-300 rounded-r-[20px] font-medium font-['Ubuntu']">
+        class="tab w-[314px] h-[75px] flex justify-center items-center text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59] hover:cursor-pointer ease-in-out duration-200 rounded-r-[20px] font-medium font-['Ubuntu']">
             Dono
         </NuxtLink>
         <NuxtLink
