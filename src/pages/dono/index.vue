@@ -1,8 +1,9 @@
 <template>
-  <div>DonoBoard</div>
+  <DonoMainDono/>
 </template>
 
 <script lang="ts">
+
 definePageMeta({
   layout: "default",
   middleware: ["auth"],

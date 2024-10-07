@@ -1,5 +1,5 @@
 <template>
-  <div>Menuboard</div>
+  <HomepageAdminMainHome/>
 </template>
 
 <script setup lang="ts">
