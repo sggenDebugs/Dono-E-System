@@ -83,7 +83,7 @@ async function handleSignIn() {
             password: password.value,
         });
         if (error) throw error;
-        router.push("/homeboard")
+        router.push("/homepage")
     } catch (error) {
         showSignInError.value = true;
         closeModal;
