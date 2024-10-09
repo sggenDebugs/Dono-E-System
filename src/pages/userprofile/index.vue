@@ -1,9 +1,11 @@
 <template>
-  <div>UserProfile</div>
+  <UserProfileAdminProfile />
 </template>
 
 <script lang="ts">
 definePageMeta({
   layout: "default",
 })
+
+
 </script>
