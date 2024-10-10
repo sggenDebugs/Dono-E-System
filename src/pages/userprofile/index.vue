@@ -1,12 +1,12 @@
 <template>
   <div>
     <UserprofileAdminProfile/>
-    
+    <UserprofileAdminMainTable/>
   </div>
 </template>
 
 <script lang="ts">
-import { UserprofileAdminProfile } from '#build/components';
+import { UserprofileAdminMainTable } from '#build/components';
 
 
 definePageMeta({

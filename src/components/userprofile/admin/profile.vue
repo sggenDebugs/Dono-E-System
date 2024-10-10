@@ -8,8 +8,9 @@
             <div class="w-[297px] h-[92px] flex-col justify-start items-start gap-2 inline-flex">
                 <div class="self-stretch text-[#1b3c59] text-xl text-left font-medium">Ghyn Carlo Ortega</div>
                 <div class="self-stretch text-[#1b3c59] text-sm text-left font-normal">Certified Racist</div>
-                <div class="w-[130px] h-[31px] bg-[#f2f2f0] rounded-lg shadow border border-[#d4d3d3] flex-col justify-center items-center flex">
-                    <div class="self-stretch grow shrink basis-0 pl-5 pr-5 py-0 justify-center items-center gap-3 inline-flex">
+                <div class="w-[fit-content] h-[31px] bg-[#f2f2f0] rounded-lg shadow border border-[#d4d3d3] flex-col justify-center items-center flex">
+                    <div class="self-stretch grow shrink basis-0 pl-2 pr-3 py-0 justify-center items-center gap-1 inline-flex cursor-pointer">
+                        <img class="w-[18px] h-[18px] relative" src="~/assets/img/edit.png"/>
                         <div class="text-center text-[#1b3c59] font-normal">Edit Profile</div>
                     </div>
                 </div>
