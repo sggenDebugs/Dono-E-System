@@ -1,5 +1,5 @@
 <template>
-    <div>Listings</div>
+    <ListingsMainListing/>
 </template>
 
 <script setup lang="ts">
