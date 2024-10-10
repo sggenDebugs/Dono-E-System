@@ -4,7 +4,7 @@
       
       <!-- Tab for Current Transactions -->
       <TabPanel
-        class="w-[216px] h-[37px] py-3 justify-center items-center gap-1 inline-flex cursor"
+        class="w-[216px] h-[37px] py-3 justify-center items-center gap-1 inline-flex cursor cursor-pointer"
         :class="{ 'active-tab': activeTab === 'current' }"
         @click="setActiveTab('current')"
       >
@@ -13,7 +13,7 @@
       
       <!-- Tab for Transaction History -->
       <TabPanel
-        class="w-[217px] h-[37px] py-3 bg-[#f2f2f0] justify-center items-center gap-1 inline-flex absolute rounded-tr-[15px]"
+        class="w-[217px] h-[37px] py-3 bg-[#f2f2f0] justify-center items-center gap-1 inline-flex absolute rounded-tr-[15px] cursor-pointer"
         :class="{ 'active-tab': activeTab === 'history' }"
         @click="setActiveTab('history')"
       >
