@@ -1,6 +1,7 @@
 <template>
     <div class="bg-[#E5E5E5]">
         <div class="self-stretch h-screen w-[314px] bg-[#1b3c59] relative">
+           <HomepageAdminSidebar/> 
             <div class="self-stretch w-screen flex justify-between items-center">
                 <img class="w-[314px] px-12 pt-3" src="/assets/img/DONO.png"/>
                 <div class="w-[260px] h-[56px] p-3 mr-3.5 mt-2 bg-[#f2f2f0] rounded-xl border border-[#d4d3d3] justify-start items-center gap-2.5 inline-flex">
@@ -13,7 +14,6 @@
                         <img class="w-[23px] h-[23px] relative hover:cursor-pointer" src="/assets/img/Dropdown.png">
                 </div>
             </div>
-            <HomepageAdminSidebar/>
         </div>
         <div class="self-stretch w-[77.42%] absolute top-[70px] inset-y-0 right-0 m-4">
             <div class="w-full border border-[#456173]"></div>
