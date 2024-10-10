@@ -22,7 +22,11 @@
       <div class="w-screen absolute top-4 left-0 flex justify-between items-center px-8"></div> 
       <LoginModal v-if="currentModal === 'signUp'"  @close="closeModal()"/>
   </div>
+<<<<<<< HEAD
 </template>
+=======
+  </template>
+>>>>>>> cbf4d255af1b5b30b70969f7472eb8f0635209e0
 
 <script setup lang="ts">
 const currentModal = ref<string | null>(null);
