@@ -25,14 +25,16 @@
 </template>
 
 <script setup lang="ts">
-const currentModal = ref<string | null>(null);
+import { Modaltype } from '~/common/enums/Modals';
+
+const currentModal = ref<Modaltype | null>(null);
 
 definePageMeta({
   layout: "no-layout",
 })
 
 function openSignUpModal() {
-  currentModal.value = 'signUp';
+  currentModal.value = Modaltype.SignUp;
 }
 
 function closeModal() {
