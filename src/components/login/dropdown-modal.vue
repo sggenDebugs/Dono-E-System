@@ -19,7 +19,7 @@
             </NuxtLink>
 
             <!-- Second Dropdown Item -->
-            <div class="w-[260px] h-[56px] p-3 mr-3.5 mt-2 bg-[#f2f2f0] rounded-b-lg border border-[#d4d3d3] flex items-center space-x-2 absolute top-[114px] cursor-pointer">
+            <div class="w-[260px] h-[56px] p-3 mr-3.5 mt-2 bg-[#f2f2f0] rounded-b-lg border border-[#d4d3d3] flex items-center space-x-2 absolute top-[114px] cursor-pointer" @click="logOut()">
                 <div class="flex justify-center items-center">
                     <img class="w-6 h-6" src="/assets/img/signOut-button.png" />
                 </div>
@@ -30,13 +30,27 @@
 </template>
 
 <script setup lang="ts">
-const closeModal = () => emit('close')
+// here
+const client = useSupabaseClient();
+const router = useRouter();
+
+async function logOut() {
+    try{
+        const { error } = await client.auth.signOut();
+        if ( error ) throw error;
+        router.push("/login")
+    } catch ( error ) {
+        console.log('Error');
+    }
+}
+// to here basin naay ganahan mu try ug emit bali if giclick ang button na sign out iyang iemit sa iyang parent which is si profile setting but si profile setting di pa ni siya parent si main home ilang parent but okay na if ma emit nmo siya sa profile setting mas commendable if sa main-home siya iemit
+
+const closeModal = () => emit('close');
 
 const props = defineProps({
   isVisible: {
     type: Boolean,
-    required: true
+    required: true,
   }
 });
 </script>
-
