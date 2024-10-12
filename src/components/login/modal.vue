@@ -63,12 +63,10 @@
 </template>
 
 <script setup lang="ts">
-
 const client = useSupabaseClient();
 const router = useRouter();
 
 const emit = defineEmits(['close']);
-
 
 const email = ref<string>('');
 const password = ref<string>('');
@@ -77,6 +75,7 @@ const showSignInError = ref(false);
 const closeModal = () => emit('close');
 
 async function handleSignIn() {
+    console.log(client.auth.getUser);
     try {
         const { error } = await client.auth.signInWithPassword({
             email: email.value,
@@ -89,9 +88,4 @@ async function handleSignIn() {
         closeModal;
     }
 }
-
-// const handleSignIn = () => {
-//   console.log('Email:', username.value);
-//   console.log('Password:', password.value);
-// };
 </script>

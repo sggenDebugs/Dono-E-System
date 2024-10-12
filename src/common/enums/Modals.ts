@@ -1,3 +1,4 @@
 export enum Modaltype {
-    SignUp = 'signUp'
+    SignUp = 'signUp',
+    Dropdown = 'dropDown'
 }

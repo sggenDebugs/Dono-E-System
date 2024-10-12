@@ -1,5 +1,6 @@
+<!-- Parent File -->
 <template>
-    <div class="w-[98%] h-[fit-content] top-[5%] justify-start absolute left-3">
+    <div class="w-[98%] h-[fit-content] top-[5%] justify-start absolute left-0">
       <TabView class="w-[217px] h-[37px] bg-[#f2f2f0] rounded-tl-[15px] flex-col justify-end items-center absolute left-0 top-0">
         
         <!-- Tab for My Tech Listings -->
@@ -23,12 +24,12 @@
       </TabView>
   
       <!-- Content for My Tech Listings -->
-      <div v-if="activeTab === 'current'" class="w-[1200px] h-[495px] left-0 top-[37px] absolute bg-[#f2f2f0]">
+      <div v-if="activeTab === 'current'" class="w-[1185px] h-[495px] left-0 top-[37px] absolute bg-[#f2f2f0]">
         <ListingsTech />
       </div>
   
       <!-- Content for My Messages -->
-      <div v-if="activeTab === 'history'" class="w-[1200px] h-[495px] left-0 top-[37px] absolute bg-[#f2f2f0]">
+      <div v-if="activeTab === 'history'" class="w-[1185px] h-[495px] left-0 top-[37px] absolute bg-[#f2f2f0]">
         <ListingsMessages />
       </div>
     </div>
