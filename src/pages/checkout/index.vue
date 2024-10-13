@@ -1,8 +1,9 @@
 <template>
-  <checkout></checkout>
+  <CheckoutMainCheckout/>
 </template>
 
 <script lang="ts">
+
 definePageMeta({
   layout: 'default'
 });
