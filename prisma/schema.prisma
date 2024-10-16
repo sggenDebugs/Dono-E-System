@@ -1,5 +1,4 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
+// schema.prisma
 
 generator client {
   provider = "prisma-client-js"
@@ -11,8 +10,8 @@ datasource db {
 }
 
 model User {
-  id Int @id @default(autoincrement())
-  email String
+  id       Int      @id @default(autoincrement())
+  email    String   @unique
   password String
-  name String?
+  name     String?
 }
