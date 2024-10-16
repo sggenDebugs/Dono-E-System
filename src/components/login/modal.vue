@@ -49,12 +49,12 @@
                         <div class="w-[18px] h-[18px] justify-center items-center flex">
                             <img class="w-[18px] h-[18px]" src="~/assets/img/google-logo.png"/>
                         </div>
-                        <div class="text-center text-[#456173] text-lg font-normal font-['Ubuntu']">Sign in with Google account</div>
+                        <div class="text-center text-[#456173] text-lg font-normal font-['Ubuntu'] hover:cursor-pointer">Sign in with Google account</div>
                     </div>
                 </div>
                 <div class="self-stretch h-10 bg-[#f2f2f0] rounded-lg shadow border border-[#d4d3d3] flex-col justify-center items-center gap-2 flex">
                     <div class="self-stretch grow shrink basis-0 px-6 py-2.5 justify-center items-center gap-2 inline-flex">
-                        <div class="text-center text-[#456173] text-lg font-normal font-['Ubuntu']">Sign in as guest</div>
+                        <div class="text-center text-[#456173] text-lg font-normal font-['Ubuntu'] hover:cursor-pointer">Sign in as guest</div>
                     </div>
                 </div>
             </div>
