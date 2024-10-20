@@ -62,68 +62,68 @@
         <div class="self-stretch w-[97.4%] absolute top-[10%]">
             <div class="w-full border border-[#d4d3d3]"></div>
         </div>
-    
-        <div class="flex space-x-4">
-            <div class="w-[214px] h-[225px] px-[19px] py-3.5 bg-[#f2f2f0] rounded-[10px] flex-col justify-center items-start gap-[5px] inline-flex">
+
+        <ul class="flex space-x-4">
+            <li class="w-[214px] h-[225px] px-[19px] py-3.5 bg-[#f2f2f0] rounded-[10px] flex-col justify-center items-start gap-[5px] inline-flex">
                 <img class="self-stretch h-[155px] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
                     <div class="w-[177px] justify-between items-center inline-flex">
-                        <div class="w-[91px] h-[18px] text-black text-sm font-medium">Acer Laptop</div>
-                        <div class="w-[86px] h-[18px] text-right text-black text-xs font-light">Predator Helios</div>
+                        <p class="w-[91px] h-[18px] text-black text-sm font-medium">Acer Laptop</p>
+                        <p class="w-[86px] h-[18px] text-right text-black text-xs font-light">Predator Helios</p>
                     </div>
                 <div class="px-[5px] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[5px] inline-flex">
                     <div class="w-[9px] h-[9px] bg-[#22d056] rounded-full"></div>
-                    <div class="text-center text-[#1b3c59] text-xs font-medium leading-[13.78px]">Almost new</div>
+                    <p class="text-center text-[#1b3c59] text-xs font-medium leading-[13.78px]">Almost new</p>
                 </div>
-            </div>
+            </li>
 
-            <div class="w-[214px] h-[225px] px-[19px] py-3.5 bg-[#f2f2f0] rounded-[10px] flex-col justify-center items-start gap-[5px] inline-flex">
+            <li class="w-[214px] h-[225px] px-[19px] py-3.5 bg-[#f2f2f0] rounded-[10px] flex-col justify-center items-start gap-[5px] inline-flex">
                 <img class="self-stretch h-[155px] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
                     <div class="w-[177px] justify-between items-center inline-flex">
-                        <div class="w-[91px] h-[18px] text-black text-sm font-medium">Smart Watch</div>
-                        <div class="w-[86px] h-[18px] text-right text-black text-xs font-light">Apple Series 10</div>
+                        <p class="w-[91px] h-[18px] text-black text-sm font-medium">Smart Watch</p>
+                        <p class="w-[86px] h-[18px] text-right text-black text-xs font-light">Apple Series 10</p>
                     </div>
                 <div class="px-[5px] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[5px] inline-flex">
                     <div class="w-[9px] h-[9px] bg-[#ffa057] rounded-full"></div>
-                    <div class="text-center text-[#1b3c59] text-xs font-medium leading-[13.78px]">Slightly Worn</div>
+                    <p class="text-center text-[#1b3c59] text-xs font-medium leading-[13.78px]">Slightly Worn</p>
                 </div>
-            </div>
+            </li>
 
-            <div class="w-[214px] h-[225px] px-[19px] py-3.5 bg-[#f2f2f0] rounded-[10px] flex-col justify-center items-start gap-[5px] inline-flex">
+            <li class="w-[214px] h-[225px] px-[19px] py-3.5 bg-[#f2f2f0] rounded-[10px] flex-col justify-center items-start gap-[5px] inline-flex">
                 <img class="self-stretch h-[155px] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
                     <div class="w-[177px] justify-between items-center inline-flex">
-                        <div class="w-[91px] h-[18px] text-black text-sm font-medium">Smart TV</div>
-                        <div class="w-[86px] h-[18px] text-right text-black text-xs font-light">TCL QM8</div>
+                        <p class="w-[91px] h-[18px] text-black text-sm font-medium">Smart TV</p>
+                        <p class="w-[86px] h-[18px] text-right text-black text-xs font-light">TCL QM8</p>
                     </div>
                 <div class="px-[5px] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[5px] inline-flex">
                     <div class="w-[9px] h-[9px] bg-[#ffd757] rounded-full"></div>
-                    <div class="text-center text-[#1b3c59] text-xs font-medium leading-[13.78px]">Slightly used</div>
+                    <p class="text-center text-[#1b3c59] text-xs font-medium leading-[13.78px]">Slightly used</p>
                 </div>
-            </div>
+            </li>
 
-            <div class="w-[214px] h-[225px] px-[19px] py-3.5 bg-[#f2f2f0] rounded-[10px] flex-col justify-center items-start gap-[5px] inline-flex">
+            <li class="w-[214px] h-[225px] px-[19px] py-3.5 bg-[#f2f2f0] rounded-[10px] flex-col justify-center items-start gap-[5px] inline-flex">
                 <img class="self-stretch h-[155px] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
                     <div class="w-[177px] justify-between items-center inline-flex">
-                        <div class="w-[91px] h-[18px] text-black text-sm font-medium">iPhone</div>
-                        <div class="w-[86px] h-[18px] text-right text-black text-xs font-light">iPhone 13</div>
+                        <p class="w-[91px] h-[18px] text-black text-sm font-medium">iPhone</p>
+                        <p class="w-[86px] h-[18px] text-right text-black text-xs font-light">iPhone 13</p>
                     </div>
                 <div class="px-[5px] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[5px] inline-flex">
                     <div class="w-[9px] h-[9px] bg-[#ff5d57] rounded-full"></div>
-                    <div class="w-14 text-[#1b3c59] text-xs font-medium leading-[13.78px]">Defective</div>
+                    <p class="w-14 text-[#1b3c59] text-xs font-medium leading-[13.78px]">Defective</p>
                 </div>
-            </div>
+            </li>
 
-            <div class="w-[214px] h-[225px] px-[19px] py-3.5 bg-[#f2f2f0] rounded-[10px] flex-col justify-center items-start gap-[5px] inline-flex">
+            <li class="w-[214px] h-[225px] px-[19px] py-3.5 bg-[#f2f2f0] rounded-[10px] flex-col justify-center items-start gap-[5px] inline-flex">
                 <img class="self-stretch h-[155px] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
                     <div class="w-[177px] justify-between items-center inline-flex">
-                        <div class="w-[91px] h-[18px] text-black text-sm font-medium">Asus Laptop</div>
-                        <div class="w-[86px] h-[18px] text-right text-black text-xs font-light">SonicMaster</div>
+                        <p class="w-[91px] h-[18px] text-black text-sm font-medium">Asus Laptop</p>
+                        <p class="w-[86px] h-[18px] text-right text-black text-xs font-light">SonicMaster</p>
                     </div>
                 <div class="px-[5px] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[5px] inline-flex">
                     <div class="w-[9px] h-[9px] bg-[#22d056] rounded-full"></div>
-                    <div class="text-center text-[#1b3c59] text-xs font-medium leading-[13.78px]">Almost new</div>
+                    <p class="text-center text-[#1b3c59] text-xs font-medium leading-[13.78px]">Almost new</p>
                 </div>
-            </div>
-        </div>
+            </li>
+        </ul>
 
     </div>
 
@@ -136,67 +136,67 @@
             <div class="w-full border border-[#d4d3d3]"></div>
         </div>
 
-            <div class="flex space-x-4">
-                <div class="w-[214px] h-[225px] px-[19px] py-3.5 bg-[#f2f2f0] rounded-[10px] flex-col justify-center items-start gap-[5px] inline-flex">
-                    <img class="self-stretch h-[155px] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
-                        <div class="w-[177px] justify-between items-center inline-flex">
-                            <div class="w-[91px] h-[18px] text-black text-sm font-medium">Acer Laptop</div>
-                            <div class="w-[86px] h-[18px] text-right text-black text-xs font-light">Predator Helios</div>
-                        </div>
-                    <div class="px-[5px] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[5px] inline-flex">
-                        <div class="w-[9px] h-[9px] bg-[#22d056] rounded-full"></div>
-                        <div class="text-center text-[#1b3c59] text-xs font-medium leading-[13.78px]">Almost new</div>
+        <ul class="flex space-x-4">
+            <li class="w-[214px] h-[225px] px-[19px] py-3.5 bg-[#f2f2f0] rounded-[10px] flex-col justify-center items-start gap-[5px] inline-flex">
+                <img class="self-stretch h-[155px] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
+                    <div class="w-[177px] justify-between items-center inline-flex">
+                        <p class="w-[91px] h-[18px] text-black text-sm font-medium">Acer Laptop</p>
+                        <p class="w-[86px] h-[18px] text-right text-black text-xs font-light">Predator Helios</p>
                     </div>
+                <div class="px-[5px] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[5px] inline-flex">
+                    <div class="w-[9px] h-[9px] bg-[#22d056] rounded-full"></div>
+                    <p class="text-center text-[#1b3c59] text-xs font-medium leading-[13.78px]">Almost new</p>
                 </div>
+            </li>
 
-                <div class="w-[214px] h-[225px] px-[19px] py-3.5 bg-[#f2f2f0] rounded-[10px] flex-col justify-center items-start gap-[5px] inline-flex">
-                    <img class="self-stretch h-[155px] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
-                        <div class="w-[177px] justify-between items-center inline-flex">
-                            <div class="w-[91px] h-[18px] text-black text-sm font-medium">Smart Watch</div>
-                            <div class="w-[86px] h-[18px] text-right text-black text-xs font-light">Apple Series 10</div>
-                        </div>
-                    <div class="px-[5px] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[5px] inline-flex">
-                        <div class="w-[9px] h-[9px] bg-[#ffa057] rounded-full"></div>
-                        <div class="text-center text-[#1b3c59] text-xs font-medium leading-[13.78px]">Slightly Worn</div>
+            <li class="w-[214px] h-[225px] px-[19px] py-3.5 bg-[#f2f2f0] rounded-[10px] flex-col justify-center items-start gap-[5px] inline-flex">
+                <img class="self-stretch h-[155px] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
+                    <div class="w-[177px] justify-between items-center inline-flex">
+                        <p class="w-[91px] h-[18px] text-black text-sm font-medium">Smart Watch</p>
+                        <p class="w-[86px] h-[18px] text-right text-black text-xs font-light">Apple Series 10</p>
                     </div>
+                <div class="px-[5px] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[5px] inline-flex">
+                    <div class="w-[9px] h-[9px] bg-[#ffa057] rounded-full"></div>
+                    <p class="text-center text-[#1b3c59] text-xs font-medium leading-[13.78px]">Slightly Worn</p>
                 </div>
-                
-                <div class="w-[214px] h-[225px] px-[19px] py-3.5 bg-[#f2f2f0] rounded-[10px] flex-col justify-center items-start gap-[5px] inline-flex">
-                    <img class="self-stretch h-[155px] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
-                        <div class="w-[177px] justify-between items-center inline-flex">
-                            <div class="w-[91px] h-[18px] text-black text-sm font-medium">Smart TV</div>
-                            <div class="w-[86px] h-[18px] text-right text-black text-xs font-light">TCL QM8</div>
-                        </div>
-                    <div class="px-[5px] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[5px] inline-flex">
-                        <div class="w-[9px] h-[9px] bg-[#ffd757] rounded-full"></div>
-                        <div class="text-center text-[#1b3c59] text-xs font-medium leading-[13.78px]">Slightly used</div>
-                    </div>
-                </div>
+            </li>
 
-                <div class="w-[214px] h-[225px] px-[19px] py-3.5 bg-[#f2f2f0] rounded-[10px] flex-col justify-center items-start gap-[5px] inline-flex">
-                    <img class="self-stretch h-[155px] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
-                        <div class="w-[177px] justify-between items-center inline-flex">
-                            <div class="w-[91px] h-[18px] text-black text-sm font-medium">iPhone</div>
-                            <div class="w-[86px] h-[18px] text-right text-black text-xs font-light">iPhone 13</div>
-                        </div>
-                    <div class="px-[5px] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[5px] inline-flex">
-                        <div class="w-[9px] h-[9px] bg-[#ff5d57] rounded-full"></div>
-                        <div class="w-14 text-[#1b3c59] text-xs font-medium leading-[13.78px]">Defective</div>
+            <li class="w-[214px] h-[225px] px-[19px] py-3.5 bg-[#f2f2f0] rounded-[10px] flex-col justify-center items-start gap-[5px] inline-flex">
+                <img class="self-stretch h-[155px] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
+                    <div class="w-[177px] justify-between items-center inline-flex">
+                        <p class="w-[91px] h-[18px] text-black text-sm font-medium">Smart TV</p>
+                        <p class="w-[86px] h-[18px] text-right text-black text-xs font-light">TCL QM8</p>
                     </div>
+                <div class="px-[5px] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[5px] inline-flex">
+                    <div class="w-[9px] h-[9px] bg-[#ffd757] rounded-full"></div>
+                    <p class="text-center text-[#1b3c59] text-xs font-medium leading-[13.78px]">Slightly used</p>
                 </div>
+            </li>
 
-                <div class="w-[214px] h-[225px] px-[19px] py-3.5 bg-[#f2f2f0] rounded-[10px] flex-col justify-center items-start gap-[5px] inline-flex">
-                    <img class="self-stretch h-[155px] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
-                        <div class="w-[177px] justify-between items-center inline-flex">
-                            <div class="w-[91px] h-[18px] text-black text-sm font-medium">Asus Laptop</div>
-                            <div class="w-[86px] h-[18px] text-right text-black text-xs font-light">SonicMaster</div>
-                        </div>
-                    <div class="px-[5px] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[5px] inline-flex">
-                        <div class="w-[9px] h-[9px] bg-[#22d056] rounded-full"></div>
-                        <div class="text-center text-[#1b3c59] text-xs font-medium leading-[13.78px]">Almost new</div>
+            <li class="w-[214px] h-[225px] px-[19px] py-3.5 bg-[#f2f2f0] rounded-[10px] flex-col justify-center items-start gap-[5px] inline-flex">
+                <img class="self-stretch h-[155px] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
+                    <div class="w-[177px] justify-between items-center inline-flex">
+                        <p class="w-[91px] h-[18px] text-black text-sm font-medium">iPhone</p>
+                        <p class="w-[86px] h-[18px] text-right text-black text-xs font-light">iPhone 13</p>
                     </div>
+                <div class="px-[5px] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[5px] inline-flex">
+                    <div class="w-[9px] h-[9px] bg-[#ff5d57] rounded-full"></div>
+                    <p class="w-14 text-[#1b3c59] text-xs font-medium leading-[13.78px]">Defective</p>
                 </div>
-            </div>
+            </li>
+
+            <li class="w-[214px] h-[225px] px-[19px] py-3.5 bg-[#f2f2f0] rounded-[10px] flex-col justify-center items-start gap-[5px] inline-flex">
+                <img class="self-stretch h-[155px] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
+                    <div class="w-[177px] justify-between items-center inline-flex">
+                        <p class="w-[91px] h-[18px] text-black text-sm font-medium">Asus Laptop</p>
+                        <p class="w-[86px] h-[18px] text-right text-black text-xs font-light">SonicMaster</p>
+                    </div>
+                <div class="px-[5px] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[5px] inline-flex">
+                    <div class="w-[9px] h-[9px] bg-[#22d056] rounded-full"></div>
+                    <p class="text-center text-[#1b3c59] text-xs font-medium leading-[13.78px]">Almost new</p>
+                </div>
+            </li>
+        </ul>
             
     </div>
 
