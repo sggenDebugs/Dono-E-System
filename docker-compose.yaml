@@ -19,19 +19,5 @@ services:
       - 8080:8080
     depends_on:
       - db
-
-  nuxt-app:
-    build: .
-    ports:
-      - '3000:3000'
-    environment:
-      SUPABASE_URL: https://kvejzgjwmubeagtobknn.supabase.co
-      SUPABASE_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt2ZWp6Z2p3bXViZWFndG9ia25uIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjc3OTcxMTEsImV4cCI6MjA0MzM3MzExMX0.w9OWIbUzvMNg6XN49LJ1kz1ZyOIWwTwJRv9WrI2h86g
-    volumes:
-      - .:/app
-    depends_on:
-      - db
-    command: pnpm dev # Run `pnpm dev` for development, change to `pnpm start` for production
-
 volumes:
   postgres-data:
