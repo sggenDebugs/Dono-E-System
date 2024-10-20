@@ -68,6 +68,3 @@ model Tag {
   name  String @unique
   items Item[] @relation("ItemTags") // Many-to-many relation to items
 }
-
-
-
