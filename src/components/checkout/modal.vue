@@ -1,5 +1,5 @@
 <template>
-   <div class="w-[547px] h-[211px] px-10 pt-[30px] pb-[25px] bg-[#f2f2f0] rounded-[15px] shadow flex-col justify-start items-center gap-[30px] inline-flex">
+   <div class="w-[547px] h-[211px] px-10 pt-[30px] pb-[25px] bg-[#f2f2f0] rounded-[15px] shadow flex-col justify-start items-center gap-[30px] inline-flex" @click.self="closeModal">
         <div class="self-stretch justify-between items-center inline-flex">
             <div class="w-[22px] h-[22px] relative"></div>
             <div class="w-[233px] h-7 text-center text-[#1b3c59] text-[28px] font-medium font-['Ubuntu']">Remove Item</div>
@@ -22,5 +22,6 @@
 </template>
 
 <script lang="ts">
-    
+    const emit = defineEmits(['close']);
+    const closeModal = () => emit('close');
 </script>
