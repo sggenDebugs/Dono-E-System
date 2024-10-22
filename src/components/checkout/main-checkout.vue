@@ -1,5 +1,6 @@
 <!-- Parent File -->
 <template>
+  <div>
     <div class="font-['Ubuntu'] text-[#1B3C59] absolute left-0 top-0 mt-[1%] ml-[1.3%]">My Cart (3)</div>
       <div class="self-stretch w-[97.4%] absolute top-[3.7%] inset-y-0 right-0 m-4">
         <div class="w-full border border-[#D4D4D4]"></div>
@@ -20,7 +21,7 @@
             <div class="justify-center items-center gap-5 flex">
               <div class="w-[130px] h-10 bg-[#1b3c59] rounded-lg shadow border border-[#d4d3d3] flex-col justify-center items-center gap-2 inline-flex">
                 <div class="self-stretch grow shrink basis-0 px-6 py-2.5 justify-center items-center gap-2 inline-flex">
-                  <div class="text-center text-[#f2f2f0] text-base font-normal font-['Ubuntu'] hover:cursor-pointer">Remove</div>
+                  <div class="text-center text-[#f2f2f0] text-base font-normal font-['Ubuntu'] hover:cursor-pointer" @click="openRemoveItem()">Remove</div>
                 </div>
               </div>
               <div class="w-[130px] h-10 bg-[#1b3c59] rounded-lg shadow flex-col justify-center items-center gap-2 inline-flex">
@@ -50,7 +51,7 @@
         <div class="justify-center items-center gap-5 flex">
           <div class="w-[130px] h-10 bg-[#1b3c59] rounded-lg shadow border border-[#d4d3d3] flex-col justify-center items-center gap-2 inline-flex">
             <div class="self-stretch grow shrink basis-0 px-6 py-2.5 justify-center items-center gap-2 inline-flex">
-                <div class="text-center text-[#f2f2f0] text-base font-normal font-['Ubuntu'] hover:cursor-pointer">Remove</div>
+                <div class="text-center text-[#f2f2f0] text-base font-normal font-['Ubuntu'] hover:cursor-pointer"  @click="openRemoveItem()">Remove</div>
             </div>
           </div>
           <div class="w-[130px] h-10 bg-[#1b3c59] rounded-lg shadow flex-col justify-center items-center gap-2 inline-flex">
@@ -80,7 +81,7 @@
           <div class="justify-center items-center gap-5 flex">
             <div class="w-[130px] h-10 bg-[#1b3c59] rounded-lg shadow border border-[#d4d3d3] flex-col justify-center items-center gap-2 inline-flex">
               <div class="self-stretch grow shrink basis-0 px-6 py-2.5 justify-center items-center gap-2 inline-flex">
-                <div class="text-center text-[#f2f2f0] text-base font-normal font-['Ubuntu'] hover:cursor-pointer">Remove</div>
+                <div class="text-center text-[#f2f2f0] text-base font-normal font-['Ubuntu'] hover:cursor-pointer" @click="openRemoveItem()">Remove</div>
               </div>
             </div>
             <div class="w-[130px] h-10 bg-[#1b3c59] rounded-lg shadow flex-col justify-center items-center gap-2 inline-flex">
@@ -98,12 +99,27 @@
           </li>
          </ul>
       </div>
-
+      <CheckoutModal v-if="currentModal === 'removeItem'"  @close="closeModal()"/>
+    </div>
     <!-- <div v-if="isEmpty" class="font-['Ubuntu'] text-[#1B3C59] text-[1.5vw] absolute top-0 inset-x-0 flex justify-center mt-12">
         <p>No Items Listed</p>
     </div> -->
 </template>
 
 <script lang="ts">
+import { Modaltype } from '~/common/enums/Modals';
 
+const currentModal = ref<Modaltype | null>(null);
+
+definePageMeta({
+  layout: "no-layout",
+})
+
+function openRemoveItem() {
+  currentModal.value = Modaltype.RemoveItem;
+}
+
+function closeModal() {
+  currentModal.value = null;
+}
 </script>
