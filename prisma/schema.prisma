@@ -1,5 +1,4 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
+// schema.prisma
 
 generator client {
   provider = "prisma-client-js"
@@ -11,8 +10,61 @@ datasource db {
 }
 
 model User {
-  id Int @id @default(autoincrement())
-  email String
-  password String
-  name String?
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  username  String   @unique
+  createdAt DateTime @default(now())
+  photo     String?
+  items     Item[]   // Relation to Item
+}
+
+model Item {
+  id             Int      @id @default(autoincrement())
+  name           String
+  photo          String?
+  isForSale      Boolean
+  isForDonation  Boolean
+  createdAt      DateTime @default(now())
+  userId         Int
+  user           User     @relation(fields: [userId], references: [id])
+
+  // Relation to other tables
+  itemDetails    ItemDetails?
+  approvalStatus ApprovalStatus[] // This is a one-to-many relation
+  tags           Tag[]     @relation("ItemTags") // Many-to-many relation
+}
+
+model ItemDetails {
+  id              Int      @id @default(autoincrement())
+  brand           String?
+  model           String?
+  description     String?
+  weight          Float?
+  height          Float?
+  eWasteType      String?
+  deviceCondition String?
+  itemId          Int      @unique
+  item            Item     @relation(fields: [itemId], references: [id])
+}
+
+model ApprovalStatus {
+  id             Int      @id @default(autoincrement())
+  status         Status   @default(IN_REVIEW)
+  isSold         Boolean  @default(false)
+  itemId         Int
+  item           Item     @relation(fields: [itemId], references: [id])
+}
+
+enum Status {
+  APPROVED
+  DISAPPROVED
+  IN_REVIEW
+  COUNTERED
+}
+
+model Tag {
+  id    Int    @id @default(autoincrement())
+  name  String @unique
+  items Item[] @relation("ItemTags") // Many-to-many relation to items
 }
