@@ -27,11 +27,10 @@
                 </div>
             </div>
             <div class="w-[20px] h-[20px] relative"></div>
-            <Message v-if="showSignInError" severity="error" @close="showSignInError = false" @life-end="showSignInError = false" :sticky="false" :life="4000">Credentials are Invalid</Message>
             <div class="w-[20px] h-[20px] relative"></div>
             <div
             class="self-stretch h-10 bg-[#1b3c59] rounded-lg shadow border border-[#d4d3d3] flex-col justify-center items-center gap-2 flex cursor-pointer hover:bg-[#14507a] transition duration-300"
-            @click="handleSignIn">
+            @click="handleSignIn()">
                 <div class="self-stretch grow shrink basis-0 px-6 py-2.5 justify-center items-center gap-2 inline-flex">
                     <div class="text-center text-[#f2f2f0] text-base font-normal font-['Ubuntu']">Sign In</div>
                 </div>
@@ -75,7 +74,7 @@ const showSignInError = ref(false);
 const closeModal = () => emit('close');
 
 async function handleSignIn() {
-    console.log(client.auth.getUser);
+    console.log('Pressed');
     try {
         const { error } = await client.auth.signInWithPassword({
             email: email.value,
