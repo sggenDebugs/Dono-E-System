@@ -5,7 +5,9 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/eslint',
-    "@nuxtjs/supabase",
+    '@nuxtjs/supabase',
+    '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt',
   ],
 
   compatibilityDate: "2024-09-26",
