@@ -1,5 +1,5 @@
 <template>
-  <CheckoutMainCheckout/>
+  <BasketMainBasket/>
 </template>
 
 <script lang="ts">

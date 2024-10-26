@@ -1,6 +1,6 @@
-<template>
+<template> 
   <div>
-    <ul class = "self-stretch flex flex-col justify-center items-center text-3xl absolute inset-0 ">
+    <ul class="self-stretch flex flex-col justify-center items-center text-3xl absolute inset-0">
       <div>
         <NuxtLink
           to="/home"
@@ -8,54 +8,62 @@
             'tab w-[314px] h-[75px] flex justify-center items-center font-medium font-[Ubuntu] duration-200 ease-in-out',
             currentTab === 'home' ? 'bg-[#e4e4e4] text-[#1b3c59] border-[#1b3c59]' : 'text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59]'
           ]"
-          @click="setActive('home')" @hover="setActive('home')"
-          >
-            Home
+          @click="setActive('home')"
+          @mouseover="hoverTab = 'home'"
+          @mouseleave="hoverTab = ''"
+        >
+          <img :src="currentTab === 'home' || hoverTab === 'home' ? activeHome : home" class="mr-4"/>
+          Home
         </NuxtLink>
       </div>  
-     <div>
-       <NuxtLink
-        to="/dono"
-        :class="[
-          'tab w-[314px] h-[75px] flex justify-center items-center font-medium font-[Ubuntu] duration-200 ease-in-out',
-          currentTab === 'dono' ? 'bg-[#e4e4e4] text-[#1b3c59] border-[#1b3c59]' : 'text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59]'
+
+      <div>
+        <NuxtLink
+          to="/basket"
+          :class="[
+            'tab w-[314px] h-[75px] flex justify-center items-center font-medium font-[Ubuntu] duration-200 ease-in-out',
+            currentTab === 'basket' ? 'bg-[#e4e4e4] text-[#1b3c59] border-[#1b3c59]' : 'text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59]'
           ]"
-          @click="setActive('dono')" @hover="setActive('dono')"
-          >
-            Dono
+          @click="setActive('basket')"
+          @mouseover="hoverTab = 'basket'"
+          @mouseleave="hoverTab = ''"
+        >
+          <img :src="currentTab === 'basket' || hoverTab === 'basket' ? activeBasket : basket" class="mr-4"/>
+          Basket
         </NuxtLink>
-     </div>
-     <div>
-       <NuxtLink
-        to="/checkout"
-        :class="[
-          'tab w-[314px] h-[75px] flex justify-center items-center font-medium font-[Ubuntu] duration-200 ease-in-out',
-          currentTab === 'checkout' ? 'bg-[#e4e4e4] text-[#1b3c59] border-[#1b3c59]' : 'text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59]'
+      </div>
+
+      <div>
+        <NuxtLink
+          to="/listings"
+          :class="[
+            'tab w-[314px] h-[75px] flex justify-center items-center font-medium font-[Ubuntu] duration-200 ease-in-out',
+            currentTab === 'listings' ? 'bg-[#e4e4e4] text-[#1b3c59] border-[#1b3c59]' : 'text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59]'
           ]"
-          @click="setActive('checkout')" @hover="setActive('checkout')"
-          >
-            Checkout
+          @click="setActive('listings')"
+          @mouseover="hoverTab = 'listings'"
+          @mouseleave="hoverTab = ''"
+        >
+          <img :src="currentTab === 'listings' || hoverTab === 'listings' ? activeListings : listings" class="mr-4"/>
+          Listings
         </NuxtLink>
-     </div>
-     <div>
-       <NuxtLink
-        to="/listings"
-        :class="[
-          'tab w-[314px] h-[75px] flex justify-center items-center font-medium font-[Ubuntu] duration-200 ease-in-out',
-          currentTab === 'listings' ? 'bg-[#e4e4e4] text-[#1b3c59] border-[#1b3c59]' : 'text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59]'
-          ]"
-          @click="setActive('listings')" @hover="setActive('listings')"
-          >
-            Listings
-        </NuxtLink>
-     </div>
+      </div>
     </ul>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import home from '@/assets/img/home.png'
+import activeHome from '@/assets/img/home-active.png'
+import basket from '@/assets/img/basket.png'
+import activeBasket from '@/assets/img/basket-active.png'
+import listings from '@/assets/img/listings.png'
+import activeListings from '@/assets/img/listings-active.png'
+
 const currentTab = ref('')
+const hoverTab = ref('')
+
 const setActive = (tab: string) => {
   currentTab.value = tab
 }
