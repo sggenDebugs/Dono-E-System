@@ -22,7 +22,7 @@
         </thead>
         </table>
         <div class="self-stretch w-[77.42%] absolute top-[70px] inset-y-0 right-0 m-4">
-            <div class="container w-[100%] h-[565px] absolute top-[70px] left-[50%] transform -translate-x-1/2 flex justify-center items-center">
+            <div class="container w-[100%] h-[565px] absolute top-[75px] left-[50%] transform -translate-x-1/2 flex items-center justify-center">
             <slot />
         </div>
             <div class="w-full border border-[#456173]"></div>

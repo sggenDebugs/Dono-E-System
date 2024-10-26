@@ -7,18 +7,18 @@
         <TabPanel
           class="w-[216px] h-[37px] py-3 justify-center items-center gap-1 inline-flex cursor cursor-pointer"
           :class="{ 'active-tab': activeTab === 'current' }"
-          @click="setActiveTab('current')"
+          @click="setActiveTab('history')"
         >
-          <h1 class="text-center text-[#1b3c59] text-lg font-medium">My Tech Listings (0)</h1>
+          <h1 class="text-center text-[#1b3c59] text-lg font-medium">My Messages (0)</h1>
         </TabPanel>
         
         <!-- Tab for My Messages -->
         <TabPanel
           class="w-[217px] h-[37px] py-3 bg-[#f2f2f0] justify-center items-center gap-1 inline-flex absolute rounded-tr-[15px] cursor-pointer"
           :class="{ 'active-tab': activeTab === 'history' }"
-          @click="setActiveTab('history')"
+          @click="setActiveTab('current')"current
         >
-          <h1 class="text-center text-[#1b3c59] text-lg font-medium">My Messages (0)</h1>
+          <h1 class="text-center text-[#1b3c59] text-lg font-medium">My Tech Listings (0)</h1>
         </TabPanel>
   
       </TabView>
