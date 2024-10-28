@@ -1,5 +1,6 @@
 <template> 
   <div>
+    <img class="w-[314px] px-12 pt-3" src="/assets/img/DONO.png"/>
     <ul class="self-stretch flex flex-col justify-center items-center text-3xl absolute inset-0">
       <div>
         <NuxtLink
@@ -49,6 +50,7 @@
         </NuxtLink>
       </div>
     </ul>
+    <HomepageAdminProfileSetting class="absolute bottom-0 left-1.5"/>
   </div>
 </template>
 
