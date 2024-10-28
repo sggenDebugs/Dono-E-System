@@ -30,13 +30,16 @@
 </template>
 
 <script setup lang="ts">
-// here
+import { useUserStore } from '~/stores/store-userStore';
+
 const client = useSupabaseClient();
 const router = useRouter();
+const userStore = useUserStore();
 
 async function logOut() {
     try{
         const { error } = await client.auth.signOut();
+        userStore.clearUsername();
         if ( error ) throw error;
         router.push("/login")
     } catch ( error ) {

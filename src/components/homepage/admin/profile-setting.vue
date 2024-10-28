@@ -31,55 +31,27 @@
 </template>
 
 <script setup lang="ts">
-import { Modaltype } from '~/common/enums/Modals';
+import { ref, onMounted, watch } from 'vue';
+import { useUserStore } from '~/stores/store-userStore';
 
-const supabase = useSupabaseClient();
-const user = useSupabaseUser();
-const displaySupaName = ref(null);
+const supaUser = useSupabaseUser();
+const userStore = useUserStore();
 
-const fetchDisplayName = async () => {
-  if (user.value) {
-    const { data, error } = await supabase
-      .from('profiles')
-      .select('display_name')
-      .eq('id', user.value.id)
-      .single();
-
-    if (data) {
-      displaySupaName.value = data.display_name;
-    }
-  }
-};
-
-
-// Update the display name when the component is mounted or when the user is updated
-onMounted(() => {
-    setUserName();
-    fetchDisplayName();
-});
-
-// Function to determine the display name based on user email, kini ra sa while wa pa database
-function setUserName() {
-    if (supaUser.value?.email === 'tristanvillamil6272003@gmail.com') {
-        displayName.value = 'Tristan Villamil';
-    } else if (supaUser.value?.email === 'leagueofyasuo78@gmail.com') {
-        displayName.value = 'Niño Olis';
-    } else if (supaUser.value?.email === 'olracagetro@gmail.com') {
-        displayName.value = 'Ghyn Ortega';
-    } else {
-        displayName.value = 'Guest';
-    }
-}
-
-const supaUser = useSupabaseUser(); //access supabase user
-
-const currentModal = ref<Modaltype | null>(null);
-const displayName = ref('Guest'); // Default to 'Guest'
-
+const displayName = ref('Guest');
 const isDropdownVisible = ref(false);
 
-function toggleDropdown() {
-    isDropdownVisible.value = !isDropdownVisible.value;
+function fetchDisplayName() {
+   displayName.value = supaUser.value?.user_metadata.display_name;
+   userStore.setUsername(displayName.value);
 }
 
+onMounted(fetchDisplayName);
+
+function toggleDropdown() {
+  isDropdownVisible.value = !isDropdownVisible.value;
+}
+
+watch(supaUser, () => {
+  if (supaUser.value) fetchDisplayName();
+});
 </script>
