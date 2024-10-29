@@ -50,10 +50,7 @@
         </NuxtLink>
       </div>
     </ul>
-<<<<<<< HEAD
-=======
     <HomepageAdminProfileSetting class="absolute bottom-0 left-1.5"/>
->>>>>>> a21b81ec0863ad57751e664218cd02f3dad5d6e0
   </div>
 </template>
 
