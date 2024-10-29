@@ -1,9 +1,8 @@
 <!-- Parent File -->
 <template>
 <div>
-
-    <div class="absolute self-stretch w-full top-0 left-0 items-center grid grid-cols-3 gap-4 ">
-        <div class="w-svw max-w-3xl my-4">
+    <div class="absolute self-stretch w-full top-2 left-0 items-center grid grid-cols-3 gap-4 ">
+        <div class="w-svw max-w-3xl my-2">
             <div class="relative flex items-center">
                     <button class="absolute group w-5 h-5 ml-3">
                         <div class="flex flex-col justify-between w-[0.8125rem] h-[0.8125rem] transform transition-all duration-300 origin-center overflow-hidden group-focus:translate-x-1.5">
@@ -54,9 +53,9 @@
         </div>
     </div>
 
-    <div class="absolute w-full top-[12%] left-0">
+    <div class="absolute w-full top-[11%] left-0">
 
-        <div class="text-[#1B3C59] text-xl font-medium mb-4">
+        <div class="text-[#1B3C59] text-xl font-medium mb-2">
             Recently Added (10)
         </div>
         <div class="self-stretch w-full absolute top-[10%]">
@@ -139,9 +138,9 @@
 
     </div>
 
-    <div class="absolute w-full top-[67.5%] left-0">
+    <div class="absolute w-full top-[65%] left-0">
 
-        <div class="text-[#1B3C59] text-xl font-medium mb-4">
+        <div class="text-[#1B3C59] text-xl font-medium mb-2">
             Admin Approved Tech (20)
         </div>
         <div class="self-stretch w-full absolute top-[10%]">

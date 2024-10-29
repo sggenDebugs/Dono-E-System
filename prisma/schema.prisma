@@ -12,11 +12,11 @@ datasource db {
 model User {
   id        Int      @id @default(autoincrement())
   email     String   @unique
-  password  String
+  password  String   
   username  String   @unique
   createdAt DateTime @default(now())
   photo     String?
-  items     Item[]   // Relation to Item
+  items     Item[]
 }
 
 model Item {
