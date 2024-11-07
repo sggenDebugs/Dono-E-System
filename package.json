@@ -12,7 +12,7 @@
   "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903",
   "dependencies": {
     "@nuxt/eslint": "^0.6.0",
-    "@pinia/nuxt": "^0.5.1",
+    "@pinia/nuxt": "^0.7.0",
     "@prisma/client": "5.9.1",
     "bcrypt": "^5.1.1",
     "kysely": "^0.27.2",
