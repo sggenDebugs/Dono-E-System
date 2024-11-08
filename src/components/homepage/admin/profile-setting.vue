@@ -31,7 +31,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, watch } from 'vue';
-import { useUserStore } from '~/stores/store-userStore';
+import { useUserStore } from '~/stores/store-currentUserStore';
 
 const supaUser = useSupabaseUser();
 const userStore = useUserStore();
