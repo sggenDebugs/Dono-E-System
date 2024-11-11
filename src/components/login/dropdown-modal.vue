@@ -30,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import { useUserStore } from '~/stores/store-userStore';
+import { useUserStore } from '~/stores/store-currentUserStore';
 
 const client = useSupabaseClient();
 const router = useRouter();

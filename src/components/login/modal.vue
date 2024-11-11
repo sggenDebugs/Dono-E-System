@@ -97,6 +97,31 @@
 </template>
 
 <script setup lang="ts">
+import { useUserDetailStore } from '@/stores/store-userDetailsStore';
+import type { User } from '~/types/user-type';
+
+const userStore = useUserDetailStore();
+
+onMounted(async () => {
+  try {
+    const { data, error } = await useFetch<{ users: User[] }>('/api/list-users');
+
+    if (error.value) {
+      console.error('Error fetching users:', error.value);
+      return;
+    }
+
+    // Access the users from the data
+    const users = data.value?.users;
+
+    if (users) {
+      userStore.setUsers(users);
+      console.log('Fetched users:', userStore.users); // Log the users to see what is passed
+    }
+  } catch (err) {
+    console.error('Fetch error:', err);
+  }
+});
 
 const client = useSupabaseClient();
 const router = useRouter();
