@@ -1,13 +1,19 @@
 <template> 
   <div>
     <img class="w-[314px] px-12 pt-3" src="/assets/img/DONO.png"/>
-    <ul class="self-stretch flex flex-col justify-center items-center text-3xl absolute inset-0">
-      <div>
+    <ul class="self-stretch flex flex-col justify-center items-center text-3xl absolute inset-0 mb-[0px]">
+      <div v-if="currentTab === 'home'" class="bg-[#e4e4e4]">
+        <div v-if="currentTab === 'home'" class="tab w-[314px] h-[75px] bg-[#1b3c59] rounded-br-[20px] justify-center items-center inline-flex"></div>
+      </div>
+        <div v-if="currentTab === 'basket'" class="tab w-[314px] h-[75px] bg-[#1b3c59] justify-center items-center inline-flex"></div>
+        <div v-if="currentTab === 'listings'" class="tab w-[314px] h-[75px] bg-[#1b3c59] justify-center items-center inline-flex"></div>
+
+      <div class="bg-[#e4e4e4]">
         <NuxtLink
           to="/home"
           :class="[
             'tab w-[314px] h-[75px] flex justify-center items-center font-medium font-[Ubuntu] duration-200 ease-in-out',
-            currentTab === 'home' ? 'bg-[#e4e4e4] text-[#1b3c59] border-[#1b3c59]' : 'text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59]'
+            currentTab === 'home' ? 'bg-[#e4e4e4] text-[#1b3c59] border-[#1b3c59]' : 'bg-[#1b3c59] rounded-br-[20px] text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59]'
           ]"
           @click="setActive('home')"
           @mouseover="hoverTab = 'home'"
@@ -18,12 +24,12 @@
         </NuxtLink>
       </div>  
 
-      <div>
+      <div class="bg-[#e4e4e4]">
         <NuxtLink
           to="/basket"
           :class="[
             'tab w-[314px] h-[75px] flex justify-center items-center font-medium font-[Ubuntu] duration-200 ease-in-out',
-            currentTab === 'basket' ? 'bg-[#e4e4e4] text-[#1b3c59] border-[#1b3c59]' : 'text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59]'
+            currentTab === 'basket' ? 'bg-[#e4e4e4] text-[#1b3c59] border-[#1b3c59]' : 'bg-[#1b3c59] rounded-r-[20px] text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59]'
           ]"
           @click="setActive('basket')"
           @mouseover="hoverTab = 'basket'"
@@ -33,13 +39,12 @@
           Basket
         </NuxtLink>
       </div>
-
-      <div>
-        <NuxtLink
+      <div class="bg-[#e4e4e4]">
+        <NuxtLink 
           to="/listings"
           :class="[
             'tab w-[314px] h-[75px] flex justify-center items-center font-medium font-[Ubuntu] duration-200 ease-in-out',
-            currentTab === 'listings' ? 'bg-[#e4e4e4] text-[#1b3c59] border-[#1b3c59]' : 'text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59]'
+            currentTab === 'listings' ? 'bg-[#e4e4e4] text-[#1b3c59] border-[#1b3c59]' : 'bg-[#1b3c59] rounded-tr-[20px] text-[#f2f2f0] hover:bg-[#e4e4e4] hover:text-[#1b3c59]'
           ]"
           @click="setActive('listings')"
           @mouseover="hoverTab = 'listings'"
@@ -49,6 +54,12 @@
           Listings
         </NuxtLink>
       </div>
+      
+        <div v-if="currentTab === 'listings'" class="bg-[#e4e4e4] mb-0">
+          <div v-if="currentTab === 'listings'" class="tab w-[314px] h-[75px] bg-[#1b3c59] rounded-tr-[20px] justify-center items-center inline-flex"></div>
+        </div>
+      <div v-if="currentTab === 'home'" class="tab w-[314px] h-[75px] bg-[#1b3c59] justify-center items-center inline-flex"></div>
+      <div v-if="currentTab === 'basket'" class="tab w-[314px] h-[75px] bg-[#1b3c59] justify-center items-center inline-flex"></div>
     </ul>
     <HomepageAdminProfileSetting class="absolute bottom-0 left-1.5"/>
   </div>

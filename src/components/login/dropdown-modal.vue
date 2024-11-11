@@ -19,7 +19,7 @@
             </NuxtLink>
 
             <!-- Second Dropdown Item -->
-            <div class="w-[300px] h-[56px] top-[-110px] p-5 mr-3.5 mt-2 bg-[#f2f2f0] border border-[#d4d3d3] flex items-center space-x-2 absolute cursor-pointer" @click="logOut()">
+            <div class="w-[300px] h-[56px] top-[-110px] rounded-t-xl p-5 mr-3.5 mt-2 bg-[#f2f2f0] border border-[#d4d3d3] flex items-center space-x-2 absolute cursor-pointer" @click="logOut()">
                 <div class="flex justify-center ml-0.5 items-center">
                     <img class="w-6 h-6" src="/assets/img/signOut-button.png" />
                 </div>

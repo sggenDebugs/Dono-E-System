@@ -124,11 +124,7 @@ async function handleSignIn() {
             password: signInPassword.value,
         });
         if (error) throw error;
-<<<<<<< HEAD
-        router.push("/home")
-=======
         router.push("/home");
->>>>>>> a21b81ec0863ad57751e664218cd02f3dad5d6e0
     } catch (error) {
         showSignInError.value = true;
         closeModal();
