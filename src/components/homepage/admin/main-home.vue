@@ -1,4 +1,39 @@
-<!-- Parent File -->
+<script lang="ts">
+import { useItemStore } from '~/stores/store-itemStore';
+import type { Item } from '~/types/item-type';
+import type { displayItem } from '~/types/displayItem-type';
+import { createPinia } from 'pinia';
+import { createApp, ref } from 'vue';
+import App from '~~/app.vue';
+
+const pinia = createPinia();
+const app = createApp(App);
+const itemsData =ref<displayItem[]>([]);
+app.use(pinia);
+
+const itemStore = useItemStore();
+
+const filteredItems = computed(() => {
+  return itemStore.getItems.map(item => ({
+    images: item.images[0],
+    status: item.status,
+    type: item.type,
+    name: item.name,
+    id: item.id
+  }));
+});
+
+itemsData.value = filteredItems.value;
+
+const displayedItem = computed(() => {
+    return itemsData.value;
+})
+
+console.log(filteredItems.value);
+console.log(itemsData.value);
+console.log(displayedItem.value);
+</script>
+
 <template>
 <div>
     <div class="absolute self-stretch w-full top-2 left-0 items-center grid grid-cols-3 gap-4 ">
@@ -54,88 +89,47 @@
     </div>
 
     <div class="absolute w-full top-[11%] left-0">
+      <div class="text-[#1B3C59] text-xl font-medium mb-2">Recently Added ({{ itemsData.length }})</div>
+      <div class="self-stretch w-full absolute top-[10%]">
+        <div class="w-full border border-[#d4d3d3]"></div>
+      </div>
 
-        <div class="text-[#1B3C59] text-xl font-medium mb-2">
-            Recently Added (10)
-        </div>
-        <div class="self-stretch w-full absolute top-[10%]">
-            <div class="w-full border border-[#d4d3d3]"></div>
-        </div>
-
-        <ul class="flex space-x-4 overflow-x-auto scrollbar-hide py-2">
-            <li class="w-[13.375rem] h-[14.0625rem] px-[1.1875rem] py-[0.875rem] bg-[#f2f2f0] rounded-[0.625rem] flex-col justify-center items-start gap-[0.3125rem] inline-flex">
-                <img class="self-stretch h-[9.6875rem] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
-                    <div class="w-[11.0625rem] justify-between items-center inline-flex">
-                        <p class="w-[5.6875rem] h-[1.125rem] text-black text-sm font-medium">Acer Laptop</p>
-                        <p class="w-[5.375rem] h-[1.125rem] text-right text-black text-xs font-light">Predator Helios</p>
-                    </div>
-                <div class="px-[0.3125rem] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[0.3125rem] inline-flex">
-                    <div class="w-[0.5625rem] h-[0.5625rem] bg-[#22d056] rounded-full"></div>
-                    <p class="text-center text-[#1b3c59] text-xs font-medium leading-[0.86125rem]">Almost new</p>
-                </div>
-            </li>
-
-            <li class="w-[13.375rem] h-[14.0625rem] px-[1.1875rem] py-[0.875rem] bg-[#f2f2f0] rounded-[0.625rem] flex-col justify-center items-start gap-[0.3125rem] inline-flex">
-                <img class="self-stretch h-[9.6875rem] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
-                    <div class="w-[11.0625rem] justify-between items-center inline-flex">
-                        <p class="w-[5.6875rem] h-[1.125rem] text-black text-sm font-medium">HP Laptop</p>
-                        <p class="w-[5.375rem] h-[1.125rem] text-right text-black text-xs font-light">Omen 16</p>
-                    </div>
-                <div class="px-[0.3125rem] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[0.3125rem] inline-flex">
-                    <div class="w-[0.5625rem] h-[0.5625rem] bg-[#22d056] rounded-full"></div>
-                    <p class="text-center text-[#1b3c59] text-xs font-medium leading-[0.86125rem]">Almost new</p>
-                </div>
-            </li>
-
-            <li class="w-[13.375rem] h-[14.0625rem] px-[1.1875rem] py-[0.875rem] bg-[#f2f2f0] rounded-[0.625rem] flex-col justify-center items-start gap-[0.3125rem] inline-flex">
-                <img class="self-stretch h-[9.6875rem] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
-                    <div class="w-[11.0625rem] justify-between items-center inline-flex">
-                        <p class="w-[5.6875rem] h-[1.125rem] text-black text-sm font-medium">Smart Watch</p>
-                        <p class="w-[5.375rem] h-[1.125rem] text-right text-black text-xs font-light">Apple Series 10</p>
-                    </div>
-                <div class="px-[0.3125rem] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[0.3125rem] inline-flex">
-                    <div class="w-[0.5625rem] h-[0.5625rem] bg-[#ffa057] rounded-full"></div>
-                    <p class="text-center text-[#1b3c59] text-xs font-medium leading-[0.86125rem]">Slightly Worn</p>
-                </div>
-            </li>
-
-            <li class="w-[13.375rem] h-[14.0625rem] px-[1.1875rem] py-[0.875rem] bg-[#f2f2f0] rounded-[0.625rem] flex-col justify-center items-start gap-[0.3125rem] inline-flex">
-                <img class="self-stretch h-[9.6875rem] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
-                    <div class="w-[11.0625rem] justify-between items-center inline-flex">
-                        <p class="w-[5.6875rem] h-[1.125rem] text-black text-sm font-medium">Smart TV</p>
-                        <p class="w-[5.375rem] h-[1.125rem] text-right text-black text-xs font-light">TCL QM8</p>
-                    </div>
-                <div class="px-[0.3125rem] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[0.3125rem] inline-flex">
-                    <div class="w-[0.5625rem] h-[0.5625rem] bg-[#ffd757] rounded-full"></div>
-                    <p class="text-center text-[#1b3c59] text-xs font-medium leading-[0.86125rem]">Slightly used</p>
-                </div>
-            </li>
-
-            <li class="w-[13.375rem] h-[14.0625rem] px-[1.1875rem] py-[0.875rem] bg-[#f2f2f0] rounded-[0.625rem] flex-col justify-center items-start gap-[0.3125rem] inline-flex">
-                <img class="self-stretch h-[9.6875rem] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
-                    <div class="w-[11.0625rem] justify-between items-center inline-flex">
-                        <p class="w-[5.6875rem] h-[1.125rem] text-black text-sm font-medium">iPhone</p>
-                        <p class="w-[5.375rem] h-[1.125rem] text-right text-black text-xs font-light">iPhone 13</p>
-                    </div>
-                <div class="px-[0.3125rem] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[0.3125rem] inline-flex">
-                    <div class="w-[0.5625rem] h-[0.5625rem] bg-[#ff5d57] rounded-full"></div>
-                    <p class="w-14 text-[#1b3c59] text-xs font-medium leading-[0.86125rem]">Defective</p>
-                </div>
-            </li>
-
-            <li class="w-[13.375rem] h-[14.0625rem] px-[1.1875rem] py-[0.875rem] bg-[#f2f2f0] rounded-[0.625rem] flex-col justify-center items-start gap-[0.3125rem] inline-flex">
-                <img class="self-stretch h-[9.6875rem] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
-                    <div class="w-[11.0625rem] justify-between items-center inline-flex">
-                        <p class="w-[5.6875rem] h-[1.125rem] text-black text-sm font-medium">Asus Laptop</p>
-                        <p class="w-[5.375rem] h-[1.125rem] text-right text-black text-xs font-light">SonicMaster</p>
-                    </div>
-                <div class="px-[0.3125rem] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[0.3125rem] inline-flex">
-                    <div class="w-[0.5625rem] h-[0.5625rem] bg-[#22d056] rounded-full"></div>
-                    <p class="text-center text-[#1b3c59] text-xs font-medium leading-[0.86125rem]">Almost new</p>
-                </div>
-            </li>
-        </ul>
-
+      <ul class="flex space-x-4 overflow-x-auto scrollbar-hide py-2">
+        <li
+          v-for="item in displayedItem"
+          :key="item.id"
+          class="w-[13.375rem] h-[14.0625rem] px-[1.1875rem] py-[0.875rem] bg-[#f2f2f0] rounded-[0.625rem] flex-col justify-center items-start gap-[0.3125rem] inline-flex"
+        >
+          <img
+            class="self-stretch h-[9.6875rem] rounded-xl border-2 border-[#d4d3d3]"
+            :src="item.images[0]"
+          />
+          <div class="w-[11.0625rem] justify-between items-center inline-flex">
+            <p class="w-[5.6875rem] h-[1.125rem] text-black text-sm font-medium">
+              {{ item.name }}
+            </p>
+            <p class="w-[5.375rem] h-[1.125rem] text-right text-black text-xs font-light">
+              {{ item.type }}
+            </p>
+          </div>
+          <div
+            class="px-[0.3125rem] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[0.3125rem] inline-flex"
+          >
+            <div
+              class="w-[0.5625rem] h-[0.5625rem]"
+              :class="{
+                'bg-[#22d056]': item.status === 'Almost new',
+                'bg-[#ffa057]': item.status === 'Slightly Worn',
+                'bg-[#ffd757]': item.status === 'Slightly used',
+                'bg-[#ff5d57]': item.status === 'Defective'
+              }"
+            ></div>
+            <p class="text-center text-[#1b3c59] text-xs font-medium leading-[0.86125rem]">
+              {{ item.status }}
+            </p>
+          </div>
+        </li>
+      </ul>
     </div>
 
     <div class="absolute w-full top-[65%] left-0">
