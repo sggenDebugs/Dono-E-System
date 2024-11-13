@@ -185,37 +185,44 @@
 </template>
 
 <script lang="ts">
-// import { useItemStore } from '~/stores/store-itemStore';
-// import type { Item } from '~/types/item-type';
-// import type { displayItem } from '~/types/displayItem-type';
-// import { createPinia } from 'pinia';
-// import { createApp, ref } from 'vue';
-// import App from '~~/app.vue';
+import { computed, ref, onMounted } from 'vue';
+import { useItemStore } from '~/stores/store-itemStore';
+import type { displayItem } from '~/types/displayItem-type';
 
-// const pinia = createPinia();
-// const app = createApp(App);
-// const itemsData =ref<displayItem[]>([]);
-// app.use(pinia);
+export default {
+  setup() {
+    const itemsData = ref<displayItem[]>([]);
+    const itemStore = useItemStore();
+    const filteredItems = computed(() => {
+      return itemStore.getItems.map(item => ({
+        images: item.images[0],
+        status: item.status,
+        type: item.type,
+        name: item.name,
+        id: item.id
+      }));
+    });
+    onMounted(() => {
+      itemsData.value = filteredItems.value;
+    });
+    const displayedItem = computed(() => {
+      return itemsData.value;
+    });
+    
+    const statusClass = (status: string) => {
+      return {
+        'bg-[#22d056]': status === 'Almost new',
+        'bg-[#ffa057]': status === 'Slightly Worn',
+        'bg-[#ffd757]': status === 'Slightly used',
+        'bg-[#ff5d57]': status === 'Defective'
+      };
+    };
 
-// const itemStore = useItemStore();
-
-// const filteredItems = computed(() => {
-//   return itemStore.getItems.map(item => ({
-//     images: item.images[0],
-//     status: item.status,
-//     type: item.type,
-//     name: item.name,
-//     id: item.id
-//   }));
-// });
-
-// itemsData.value = filteredItems.value;
-
-// const displayedItem = computed(() => {
-//     return itemsData.value;
-// })
-
-// console.log(filteredItems.value);
-// console.log(itemsData.value);
-// console.log(displayedItem.value);
+    return {
+      itemsData,
+      displayedItem,
+      statusClass
+    };
+  }
+};
 </script>

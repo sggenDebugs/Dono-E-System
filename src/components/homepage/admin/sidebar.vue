@@ -1,5 +1,5 @@
 <template> 
-  <div class="flex flex-col items-center h-screen w-[314px]">
+  <div class="flex flex-col items-center h-screen w-[314px] ">
     <!-- Header Image -->
     <div class="flex justify-center pt-3 pb-4 bg-[#1b3c59]">
       <img class="w-[314px] px-12" src="/assets/img/DONO.png" alt="Header Image" />
@@ -32,7 +32,7 @@
     </ul>    
 
     <!-- Footer Profile Setting -->
-    <HomepageAdminProfileSetting class="mt-auto mb-4"/>
+    <HomepageAdminProfileSetting class="mt-auto pb-4 bg-[#1b3c59]"/>
   </div>
 </template>
 
@@ -65,6 +65,7 @@ const selectTab = (tabId: number) => {
   selectedTab.value = tabId;
   sessionStorage.setItem('selectedTab', tabId.toString());
 };
+
 </script>
 
 
