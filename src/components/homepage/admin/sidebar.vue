@@ -37,7 +37,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import home from '@/assets/img/home.png'
 import activeHome from '@/assets/img/home-active.png'
 import basket from '@/assets/img/basket.png'
@@ -55,7 +55,7 @@ const tabs = [
 ];
 
 onMounted(() => {
-  const savedTab = localStorage.getItem('selectedTab');
+  const savedTab = sessionStorage.getItem('selectedTab');
   if (savedTab) {
     selectedTab.value = parseInt(savedTab);
   }
@@ -63,10 +63,10 @@ onMounted(() => {
 
 const selectTab = (tabId: number) => {
   selectedTab.value = tabId;
-  localStorage.setItem('selectedTab', tabId.toString());
+  sessionStorage.setItem('selectedTab', tabId.toString());
 };
-
 </script>
+
 
 <style scoped>
 .tab:has(+ .tab[aria-selected="true"]){
