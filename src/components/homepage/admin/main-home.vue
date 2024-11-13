@@ -1,39 +1,3 @@
-<script lang="ts">
-import { useItemStore } from '~/stores/store-itemStore';
-import type { Item } from '~/types/item-type';
-import type { displayItem } from '~/types/displayItem-type';
-import { createPinia } from 'pinia';
-import { createApp, ref } from 'vue';
-import App from '~~/app.vue';
-
-const pinia = createPinia();
-const app = createApp(App);
-const itemsData =ref<displayItem[]>([]);
-app.use(pinia);
-
-const itemStore = useItemStore();
-
-const filteredItems = computed(() => {
-  return itemStore.getItems.map(item => ({
-    images: item.images[0],
-    status: item.status,
-    type: item.type,
-    name: item.name,
-    id: item.id
-  }));
-});
-
-itemsData.value = filteredItems.value;
-
-const displayedItem = computed(() => {
-    return itemsData.value;
-})
-
-console.log(filteredItems.value);
-console.log(itemsData.value);
-console.log(displayedItem.value);
-</script>
-
 <template>
 <div>
     <div class="absolute self-stretch w-full top-2 left-0 items-center grid grid-cols-3 gap-4 ">
@@ -219,3 +183,39 @@ console.log(displayedItem.value);
 
 </div>
 </template>
+
+<script lang="ts">
+// import { useItemStore } from '~/stores/store-itemStore';
+// import type { Item } from '~/types/item-type';
+// import type { displayItem } from '~/types/displayItem-type';
+// import { createPinia } from 'pinia';
+// import { createApp, ref } from 'vue';
+// import App from '~~/app.vue';
+
+// const pinia = createPinia();
+// const app = createApp(App);
+// const itemsData =ref<displayItem[]>([]);
+// app.use(pinia);
+
+// const itemStore = useItemStore();
+
+// const filteredItems = computed(() => {
+//   return itemStore.getItems.map(item => ({
+//     images: item.images[0],
+//     status: item.status,
+//     type: item.type,
+//     name: item.name,
+//     id: item.id
+//   }));
+// });
+
+// itemsData.value = filteredItems.value;
+
+// const displayedItem = computed(() => {
+//     return itemsData.value;
+// })
+
+// console.log(filteredItems.value);
+// console.log(itemsData.value);
+// console.log(displayedItem.value);
+</script>
