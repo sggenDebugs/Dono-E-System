@@ -184,7 +184,7 @@
 </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { computed, ref, onMounted } from 'vue';
 import { useItemStore } from '~/stores/store-itemStore';
 import type { displayItem } from '~/types/displayItem-type';
