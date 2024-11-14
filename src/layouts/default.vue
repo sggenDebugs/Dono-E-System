@@ -27,7 +27,7 @@
         </thead>
         </table>
         </div>
-        <div class="self-stretch h-screen w-[314px] bg-[#1b3c59] relative">
+        <div>
             <HomepageAdminSidebar/>
         </div>
         
