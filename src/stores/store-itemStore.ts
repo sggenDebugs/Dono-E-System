@@ -82,6 +82,11 @@ export const useItemStore = defineStore('itemStore', {
     },
     ] as Item[]
   }),
+  actions:{
+    addItem(newItem: Item[]) {
+      this.items = newItem;
+  },
+  },
   getters: {
     getItems: (state) => state.items
   }
