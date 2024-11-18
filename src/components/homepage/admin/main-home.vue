@@ -80,7 +80,7 @@
             class="px-[0.3125rem] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[0.3125rem] inline-flex"
           >
             <div
-              class="w-[0.5625rem] h-[0.5625rem]"
+              class="w-[0.5625rem] h-[0.5625rem] rounded-[5px]"
               :class="{
                 'bg-[#22d056]': item.status === 'Almost new',
                 'bg-[#ffa057]': item.status === 'Slightly Worn',
@@ -189,40 +189,34 @@ import { computed, ref, onMounted } from 'vue';
 import { useItemStore } from '~/stores/store-itemStore';
 import type { displayItem } from '~/types/displayItem-type';
 
-export default {
-  setup() {
-    const itemsData = ref<displayItem[]>([]);
-    const itemStore = useItemStore();
-    const filteredItems = computed(() => {
-      return itemStore.getItems.map(item => ({
-        images: item.images[0],
-        status: item.status,
-        type: item.type,
-        name: item.name,
-        id: item.id
-      }));
-    });
-    onMounted(() => {
-      itemsData.value = filteredItems.value;
-    });
-    const displayedItem = computed(() => {
-      return itemsData.value;
-    });
-    
-    const statusClass = (status: string) => {
-      return {
-        'bg-[#22d056]': status === 'Almost new',
-        'bg-[#ffa057]': status === 'Slightly Worn',
-        'bg-[#ffd757]': status === 'Slightly used',
-        'bg-[#ff5d57]': status === 'Defective'
-      };
-    };
+const itemsData = ref<displayItem[]>([]);
+const itemStore = useItemStore();
+const filteredItems = computed(() => {
+      
+return itemStore.getItems.map(item => ({
+    images: item.images[0],
+    status: item.status,
+    type: item.type,
+    name: item.name,
+    id: item.id
+  }));
+});
 
-    return {
-      itemsData,
-      displayedItem,
-      statusClass
-    };
-  }
+onMounted(() => {
+  itemsData.value = filteredItems.value;
+});
+const displayedItem = computed(() => {
+     
+  return itemsData.value;
+});
+    
+const statusClass = (status: string) => {
+      
+  return {
+    'bg-[#22d056]': status === 'Almost new',
+    'bg-[#ffa057]': status === 'Slightly Worn',
+    'bg-[#ffd757]': status === 'Slightly used',
+    'bg-[#ff5d57]': status === 'Defective'
+  };
 };
 </script>

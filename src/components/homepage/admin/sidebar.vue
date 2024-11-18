@@ -65,24 +65,6 @@ const selectTab = (tabId: number) => {
   selectedTab.value = tabId;
   sessionStorage.setItem('selectedTab', tabId.toString());
 };
-
-const tabs = [
-  { id: 1, name: 'Home', route: '/home', img: home, activeImg: activeHome},
-  { id: 2, name: 'Basket', route: '/basket', img: basket, activeImg: activeBasket},
-  { id: 3, name: 'Listings', route: '/listings', img: listings, activeImg: activeListings }
-];
-
-onMounted(() => {
-  const savedTab = sessionStorage.getItem('selectedTab');
-  if (savedTab) {
-    selectedTab.value = parseInt(savedTab);
-  }
-});
-
-const selectTab = (tabId: number) => {
-  selectedTab.value = tabId;
-  sessionStorage.setItem('selectedTab', tabId.toString());
-};
 </script>
 
 
