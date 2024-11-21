@@ -50,15 +50,16 @@
                 </div>
             </button>
         </div>
-    </div>
-
-    <div class="absolute w-full top-[11%] left-0">
-      <div class="text-[#1B3C59] text-xl font-medium mb-2">Recently Added ({{ itemsData.length }})</div>
-      <div class="self-stretch w-full absolute top-[10%]">
-        <div class="w-full border border-[#d4d3d3]"></div>
       </div>
-
-      <ul class="flex space-x-4 overflow-x-auto scrollbar-hide py-2">
+    
+    <ul class="absolute flex flex-col left-0 top-14 space-y-4 overflow-auto max-h-[calc(100vh-4rem)] scrollbar-hide py-2">
+      <li v-for="(row, rowIndex) in rows" :key="rowIndex">
+        <div class="grid w-full top-[11%] left-0">
+          <div class="text-[#1B3C59] text-xl font-medium mb-2">{{ row.title }} ({{ itemsData.length }})</div>
+          <!-- <div class="self-stretch w-full absolute top-2">
+            <div class="w-full border border-[#d4d3d3]"></div>
+          </div> -->
+          <ul class="flex space-x-4 overflow-x-auto scrollbar-hide py-2">
         <li
           v-for="item in displayedItem"
           :key="item.id"
@@ -94,99 +95,16 @@
           </div>
         </li>
       </ul>
-    </div>
-
-    <div class="absolute w-full top-[65%] left-0">
-
-        <div class="text-[#1B3C59] text-xl font-medium mb-2">
-            Admin Approved Tech (20)
         </div>
-        <div class="self-stretch w-full absolute top-[10%]">
-            <div class="w-full border border-[#d4d3d3]"></div>
-        </div>
-
-        <ul class="flex space-x-4 overflow-x-auto scrollbar-hide py-2">
-            <li class="w-[13.375rem] h-[14.0625rem] px-[1.1875rem] py-[0.875rem] bg-[#f2f2f0] rounded-[0.625rem] flex-col justify-center items-start gap-[0.3125rem] inline-flex">
-                <img class="self-stretch h-[9.6875rem] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
-                    <div class="w-[11.0625rem] justify-between items-center inline-flex">
-                        <p class="w-[5.6875rem] h-[1.125rem] text-black text-sm font-medium">Acer Laptop</p>
-                        <p class="w-[5.375rem] h-[1.125rem] text-right text-black text-xs font-light">Predator Helios</p>
-                    </div>
-                <div class="px-[0.3125rem] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[0.3125rem] inline-flex">
-                    <div class="w-[0.5625rem] h-[0.5625rem] bg-[#22d056] rounded-full"></div>
-                    <p class="text-center text-[#1b3c59] text-xs font-medium leading-[0.86125rem]">Almost new</p>
-                </div>
-            </li>
-
-            <li class="w-[13.375rem] h-[14.0625rem] px-[1.1875rem] py-[0.875rem] bg-[#f2f2f0] rounded-[0.625rem] flex-col justify-center items-start gap-[0.3125rem] inline-flex">
-                <img class="self-stretch h-[9.6875rem] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
-                    <div class="w-[11.0625rem] justify-between items-center inline-flex">
-                        <p class="w-[5.6875rem] h-[1.125rem] text-black text-sm font-medium">HP Laptop</p>
-                        <p class="w-[5.375rem] h-[1.125rem] text-right text-black text-xs font-light">Omen 16</p>
-                    </div>
-                <div class="px-[0.3125rem] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[0.3125rem] inline-flex">
-                    <div class="w-[0.5625rem] h-[0.5625rem] bg-[#22d056] rounded-full"></div>
-                    <p class="text-center text-[#1b3c59] text-xs font-medium leading-[0.86125rem]">Almost new</p>
-                </div>
-            </li>
-
-            <li class="w-[13.375rem] h-[14.0625rem] px-[1.1875rem] py-[0.875rem] bg-[#f2f2f0] rounded-[0.625rem] flex-col justify-center items-start gap-[0.3125rem] inline-flex">
-                <img class="self-stretch h-[9.6875rem] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
-                    <div class="w-[11.0625rem] justify-between items-center inline-flex">
-                        <p class="w-[5.6875rem] h-[1.125rem] text-black text-sm font-medium">Smart Watch</p>
-                        <p class="w-[5.375rem] h-[1.125rem] text-right text-black text-xs font-light">Apple Series 10</p>
-                    </div>
-                <div class="px-[0.3125rem] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[0.3125rem] inline-flex">
-                    <div class="w-[0.5625rem] h-[0.5625rem] bg-[#ffa057] rounded-full"></div>
-                    <p class="text-center text-[#1b3c59] text-xs font-medium leading-[0.86125rem]">Slightly Worn</p>
-                </div>
-            </li>
-
-            <li class="w-[13.375rem] h-[14.0625rem] px-[1.1875rem] py-[0.875rem] bg-[#f2f2f0] rounded-[0.625rem] flex-col justify-center items-start gap-[0.3125rem] inline-flex">
-                <img class="self-stretch h-[9.6875rem] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
-                    <div class="w-[11.0625rem] justify-between items-center inline-flex">
-                        <p class="w-[5.6875rem] h-[1.125rem] text-black text-sm font-medium">Smart TV</p>
-                        <p class="w-[5.375rem] h-[1.125rem] text-right text-black text-xs font-light">TCL QM8</p>
-                    </div>
-                <div class="px-[0.3125rem] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[0.3125rem] inline-flex">
-                    <div class="w-[0.5625rem] h-[0.5625rem] bg-[#ffd757] rounded-full"></div>
-                    <p class="text-center text-[#1b3c59] text-xs font-medium leading-[0.86125rem]">Slightly used</p>
-                </div>
-            </li>
-
-            <li class="w-[13.375rem] h-[14.0625rem] px-[1.1875rem] py-[0.875rem] bg-[#f2f2f0] rounded-[0.625rem] flex-col justify-center items-start gap-[0.3125rem] inline-flex">
-                <img class="self-stretch h-[9.6875rem] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
-                    <div class="w-[11.0625rem] justify-between items-center inline-flex">
-                        <p class="w-[5.6875rem] h-[1.125rem] text-black text-sm font-medium">iPhone</p>
-                        <p class="w-[5.375rem] h-[1.125rem] text-right text-black text-xs font-light">iPhone 13</p>
-                    </div>
-                <div class="px-[0.3125rem] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[0.3125rem] inline-flex">
-                    <div class="w-[0.5625rem] h-[0.5625rem] bg-[#ff5d57] rounded-full"></div>
-                    <p class="w-14 text-[#1b3c59] text-xs font-medium leading-[0.86125rem]">Defective</p>
-                </div>
-            </li>
-
-            <li class="w-[13.375rem] h-[14.0625rem] px-[1.1875rem] py-[0.875rem] bg-[#f2f2f0] rounded-[0.625rem] flex-col justify-center items-start gap-[0.3125rem] inline-flex">
-                <img class="self-stretch h-[9.6875rem] rounded-xl border-2 border-[#d4d3d3]" src="https://via.placeholder.com/176x155" />
-                    <div class="w-[11.0625rem] justify-between items-center inline-flex">
-                        <p class="w-[5.6875rem] h-[1.125rem] text-black text-sm font-medium">Asus Laptop</p>
-                        <p class="w-[5.375rem] h-[1.125rem] text-right text-black text-xs font-light">SonicMaster</p>
-                    </div>
-                <div class="px-[0.3125rem] bg-[#e4e4e4] rounded-xl justify-start items-center gap-[0.3125rem] inline-flex">
-                    <div class="w-[0.5625rem] h-[0.5625rem] bg-[#22d056] rounded-full"></div>
-                    <p class="text-center text-[#1b3c59] text-xs font-medium leading-[0.86125rem]">Almost new</p>
-                </div>
-            </li>
-        </ul>
-            
-    </div>
-
+  </li>
+    </ul>
 </div>
 </template>
 
 <script setup lang="ts">
 import { computed, ref, onMounted } from 'vue';
 import { useItemStore } from '~/stores/store-itemStore';
+import { StatusColor } from '~/common/enums/StatusColors';
 import type { displayItem } from '~/types/displayItem-type';
 
 const itemsData = ref<displayItem[]>([]);
@@ -202,6 +120,12 @@ return itemStore.getItems.map(item => ({
   }));
 });
 
+const rows = [
+  {title: 'Featured'},
+  {title: 'Phones'},
+  {title: 'Laptops'}
+];
+
 onMounted(() => {
   itemsData.value = filteredItems.value;
 });
@@ -210,13 +134,15 @@ const displayedItem = computed(() => {
   return itemsData.value;
 });
     
-const statusClass = (status: string) => {
-      
-  return {
-    'bg-[#22d056]': status === 'Almost new',
-    'bg-[#ffa057]': status === 'Slightly Worn',
-    'bg-[#ffd757]': status === 'Slightly used',
-    'bg-[#ff5d57]': status === 'Defective'
+const classTag = (status: number) => {
+  const statusColor: { [key: number]: string } = {
+    1: StatusColor.AlmostNew,
+    2: StatusColor.SlighltyWorn,
+    3: StatusColor.SlightlyUsed,
+    4: StatusColor.Defective,
   };
+
+  return statusColor[status] || "";
 };
+
 </script>

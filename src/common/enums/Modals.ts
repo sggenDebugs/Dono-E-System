@@ -1,4 +1,5 @@
 export enum Modaltype {
     SignUp = 'signUp',
-    Dropdown = 'dropDown'
+    Dropdown = 'dropDown',
+    UploadItem = 'uploadItem'
 }
