@@ -105,6 +105,7 @@
 import { computed, ref, onMounted } from 'vue';
 import { useItemStore } from '~/stores/store-itemStore';
 import { StatusColor } from '~/common/enums/StatusColors';
+import { StatusText } from '~/common/enums/StatusText';
 import type { displayItem } from '~/types/displayItem-type';
 
 const itemsData = ref<displayItem[]>([]);
@@ -133,11 +134,22 @@ const displayedItem = computed(() => {
      
   return itemsData.value;
 });
-    
+
+const getStatusText = (status: number) => {
+  const statusText: { [key: number]: string } = {
+    1: StatusText.AlmostNew,
+    2: StatusText.SlightlyWorn,
+    3: StatusText.SlightlyUsed,
+    4: StatusText.Defective,
+  };
+
+  return statusText[status] || "";
+};
+
 const classTag = (status: number) => {
   const statusColor: { [key: number]: string } = {
     1: StatusColor.AlmostNew,
-    2: StatusColor.SlighltyWorn,
+    2: StatusColor.SlightlyWorn,
     3: StatusColor.SlightlyUsed,
     4: StatusColor.Defective,
   };
