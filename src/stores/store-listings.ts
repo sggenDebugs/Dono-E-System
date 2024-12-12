@@ -2,7 +2,7 @@
 import { defineStore } from 'pinia';
 import type { Item } from '~/types/item-type';
 
-export const useItemStore = defineStore('itemStore', {
+export const useListings = defineStore('itemStore', {
   state: () => ({
     items: [
       {
