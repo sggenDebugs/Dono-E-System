@@ -5,7 +5,7 @@
             <div class="container w-[100%] h-[565px] absolute top-[0px] left-[50%] transform -translate-x-1/2 flex items-center justify-center">
             <slot />
         </div>
-        <table>
+        <!-- <table>
         <thead>
             <tr class="self-stretch sm:justify-center absolute w-[100%] bottom-0 left-0 mr-0 flex flex-row">
                 <th class="w-[31%] h-[0%] px-2.5 py-[15px] my-2 mx-3.5 bg-[#a6ed8e] justify-center items-center inline-block overflow-hidden">
@@ -25,7 +25,7 @@
                 </th>
             </tr>
         </thead>
-        </table>
+        </table> -->
         </div>
         <div>
             <HomepageAdminSidebar/>
