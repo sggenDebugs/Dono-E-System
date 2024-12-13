@@ -36,7 +36,8 @@
   </template>
   
   <script setup>
-  import { ref } from 'vue'
+  import { computed, ref, onMounted } from 'vue';
+  import { useListings } from '~/stores/store-listings';
   
   // Declare the active tab
   const activeTab = ref('current') // default to 'current'
