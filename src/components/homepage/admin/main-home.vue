@@ -55,9 +55,6 @@
       <li v-for="(row, rowIndex) in rows" :key="rowIndex">
         <div class="grid w-full top-[11%] left-0">
           <div class="text-[#1B3C59] text-xl font-medium mb-2">{{ row.title }} ({{ itemsData.length }})</div>
-          <!-- <div class="self-stretch w-full absolute top-2">
-            <div class="w-full border border-[#d4d3d3]"></div>
-          </div> -->
           <ul class="flex space-x-4 overflow-x-auto scrollbar-hide py-2">
         <li
           v-for="item in displayedItem"
