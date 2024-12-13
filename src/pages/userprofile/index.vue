@@ -5,8 +5,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import { UserprofileAdminMainTable } from '#build/components';
+<script setup lang="ts">
+// import { UserprofileAdminMainTable } from '#build/components';
 
 
 definePageMeta({
